@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>CONSUMIDOR RD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <form>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <img src="">
+      </ion-col>
+  </ion-row>
+      <ion-row>
+          <ion-col>
+              <h1>Iniciar Sesión</h1>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <ion-list>
+                  <ion-item>
+                      <ion-icon name="person-outline" slot="start"></ion-icon>
+                      <ion-input name="user" type="text" required placeholder="Usuario"></ion-input>
+                  </ion-item>
+                  <br />
+                  <ion-item>
+                      <ion-icon name="key-outline" slot="start"></ion-icon>
+                      <ion-input name="password" type="password" required placeholder="Contraseña"></ion-input>
+                  </ion-item>
+              </ion-list>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <ion-button type="submit" fill="solid" expand="block">
+                  Entrar
+              </ion-button>
+              <ion-button type="submit" fill="solid" expand="block">
+                  Crear Cuenta
+              </ion-button>
+              <ion-button type="submit" fill="solid" expand="block" color="danger">
+                Google 
+            </ion-button>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <ion-button type="submit" fill="clean" expand="full">
+              Se me olvido la contraseña
+          </ion-button> 
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+ </form>
+</ion-content>
