@@ -1,0 +1,7 @@
+{
+  "name": "consumidor-rd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
