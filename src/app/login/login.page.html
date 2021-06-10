@@ -5,11 +5,12 @@
 </ion-header>
 
 <ion-content>
+
  <form>
   <ion-grid>
     <ion-row>
       <ion-col>
-          <img src="">
+          <img src="assets/images/consumidor-rd.jpg">
       </ion-col>
   </ion-row>
       <ion-row>
@@ -26,8 +27,8 @@
                   </ion-item>
                   <br />
                   <ion-item>
-                      <ion-icon name="key-outline" slot="start"></ion-icon>
-                      <ion-input name="password" type="password" required placeholder="Contraseña"></ion-input>
+                    <ion-icon name="lock-closed-outline" slot="start" ></ion-icon>
+                      <ion-input name="password" type="password" required placeholder="Contraseña" minlength="8" ></ion-input>
                   </ion-item>
               </ion-list>
           </ion-col>
@@ -37,7 +38,7 @@
               <ion-button type="submit" fill="solid" expand="block">
                   Entrar
               </ion-button>
-              <ion-button type="submit" fill="solid" expand="block">
+              <ion-button type="submit" fill="solid" expand="block" routerLink="/registrar-usuario">
                   Crear Cuenta
               </ion-button>
               <ion-button type="submit" fill="solid" expand="block" color="danger">
@@ -48,10 +49,11 @@
       <ion-row>
           <ion-col>
             <ion-button type="submit" fill="clean" expand="full">
-              Se me olvido la contraseña
+              Recuperar contraseña
           </ion-button> 
           </ion-col>
       </ion-row>
   </ion-grid>
  </form>
+
 </ion-content>
