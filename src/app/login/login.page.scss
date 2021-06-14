@@ -1,5 +1,6 @@
  
- ion-title {text-align: center;}
+ ion-title {text-align: center;
+color: white;}
 
  h1{text-align: center;}
 
@@ -10,9 +11,16 @@
 ion-button {
     margin-top: 3px;
     margin-bottom: 10px;
+    --background:blue;
 }
 
 img{height: 150px;
 width: 200px;
 display: block;
 margin: auto;}
+
+ion-toolbar {
+    --background:blue;
+  }
+
+  h4 {text-align: center;}
