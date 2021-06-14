@@ -18,7 +18,15 @@ const routes: Routes = [
   {
     path: 'registrar-usuario',
     loadChildren: () => import('./registrar-usuario/registrar-usuario.module').then( m => m.RegistrarUsuarioPageModule)
+  },  {
+    path: 'ayuda',
+    loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
   },
+  {
+    path: 'ajuste',
+    loadChildren: () => import('./ajuste/ajuste.module').then( m => m.AjustePageModule)
+  },
+
   
 
 
