@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" routerLink="/home">
+      <ion-icon name="arrow-back-outline"></ion-icon> 
+      <!--ion-back-button> </ion-back-button-->
+    </ion-buttons>
+    <ion-buttons slot="end" routerLink="/home"> 
+      <ion-icon name="settings-outline"> 
+    </ion-icon></ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-footer> 
+  <ion-toolbar> 
+    <ion-title>Santo Domingo, Republica Dominicana</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+
+<ion-content>
+  <ion-grid >
+    <ion-row class="ion-align-items-center"> 
+    <ion-col>
+      <center>
+        <img src ="assets/images/fotoperfil.png">
+        <ion-label>
+          <h1> Nombre de usuario </h1>
+        </ion-label>
+      </center>
+      </ion-col>
+    </ion-row>  
+     
+      <ion-row> 
+      <ion-col>
+        <ion-fab horizontal="center">
+          <ion-fab-button>
+                <ion-label> 1 </ion-label>
+          </ion-fab-button>
+        </ion-fab>  
+        <br>
+        <br>  
+        <br>  
+        <center><ion-label position="stacked"> Opniones </ion-label></center>
+      </ion-col>
+      <!-->va dentro del mismo row<-->
+      <ion-col>
+        <ion-fab horizontal="center">
+          <ion-fab-button color="primary">
+                <ion-label> 12 </ion-label>
+          </ion-fab-button> 
+        </ion-fab>  
+        <br>
+        <br>  
+        <br>  
+        <center><ion-label position="stacked"> Calificaciones </ion-label></center>
+      </ion-col>
+      </ion-row> 
+
+  </ion-grid>
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ion-button type="submit" fill="outline" expand="block" routerLink="/home">
+        Ver historial de reseñas  
+      </ion-button> 
+      <br>
+        <ion-button type="submit" fill="solid" expand="block" routerLink="/login">
+          Salir de sesion
+        </ion-button>
+    </ion-col>
+</ion-row>
+</ion-grid>
+  
+
+</ion-content>
