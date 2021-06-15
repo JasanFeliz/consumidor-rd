@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'ajuste',
     loadChildren: () => import('./ajuste/ajuste.module').then( m => m.AjustePageModule)
   },
+  {
+    path: 'cambiar-contrasena',
+    loadChildren: () => import('./cambiar-contrasena/cambiar-contrasena.module').then( m => m.CambiarContrasenaPageModule)
+  },
 
   
 

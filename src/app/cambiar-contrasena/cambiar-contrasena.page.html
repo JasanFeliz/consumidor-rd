@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cambiar Contraseña</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ajuste" color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+  <form>
+    <ion-row>
+      <ion-col>
+          <ion-list>
+              <ion-item>
+                <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                <ion-input name="actuak-contrasena" type="password" required placeholder="Actual Contrasena"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="key-outline" slot="start"></ion-icon>
+                <ion-input name="nueva-contrasena" type="password" required placeholder="Nueva Contrasena"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="lock-closed" slot="start"></ion-icon>
+                <ion-input name="Confirmar-contrasena" type="password" required placeholder="Confirmar Contrasena"></ion-input>
+              </ion-item>
+          </ion-list>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <ion-button type="submit" fill="solid" expand="block">
+          Cambiar
+        </ion-button>
+    </ion-col>
+</ion-row>
+  </form>
+
+</ion-content>
