@@ -30,6 +30,14 @@ const routes: Routes = [
     path: 'editar-perfil',
     loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
   },
+  {
+    path: 'verificar-cuenta',
+    loadChildren: () => import('./verificar-cuenta/verificar-cuenta.module').then( m => m.VerificarCuentaPageModule)
+  },
+  {
+    path: 'recuperar-clave',
+    loadChildren: () => import('./recuperar-clave/recuperar-clave.module').then( m => m.RecuperarClavePageModule)
+  },
 
   
 
