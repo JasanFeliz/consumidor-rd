@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ajustes</ion-title>
+    <ion-buttons>
+      <ion-back-button> </ion-back-button>
+    </ion-buttons>
+    <!--ion-buttons slot="end"--> 
+      <!--ion-icon name="settings-outline"> 
+    </ion-icon>
+  </ion-buttons-->
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <br>
+  <br>
+    <ion-item>  
+      <h4>Tema oscuro</h4>
+      <ion-toggle (ionChange)='toggleTheme($event)'slot="end"></ion-toggle>
+    </ion-item> 
+    <br>
+    <br>
+    <ion-item>  
+      <h4>Recibir notificaciones</h4>
+      <ion-toggle (ionChange)='toggleTheme($event2)'slot="end"></ion-toggle>
+    </ion-item>
+          <br>
+          <br>
+          <ion-button  type="submit" fill="clear" routerLink="/home">
+            <h4>Cambiar suscripción</h4> 
+          </ion-button> 
+</ion-content>
