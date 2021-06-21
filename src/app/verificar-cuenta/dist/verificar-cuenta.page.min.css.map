@@ -1,0 +1,1 @@
+{"version":3,"sources":["verificar-cuenta.page.scss"],"names":[],"mappings":"AAAA,GACE,WAAY,OAGd,SACE,aAAc","file":"verificar-cuenta.page.min.css","sourcesContent":["h6{text-align: center;}\r\n\r\n ion-icon {\r\n    margin-right: 15px;\r\n}"]}

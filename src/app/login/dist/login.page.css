@@ -1,0 +1,35 @@
+ion-title {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+ion-icon {
+  margin-right: 15px;
+}
+
+ion-button {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  --background:blue;
+}
+
+img {
+  height: 192px;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+ion-toolbar {
+  --background:blue;
+}
+
+h4 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=login.page.css.map */
