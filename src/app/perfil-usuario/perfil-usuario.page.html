@@ -3,12 +3,12 @@
     <ion-buttons>
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-buttons routerLink="/editar-perfil" slot="end"> 
+    <!--ion-buttons routerLink="/editar-perfil" slot="end"> 
       <ion-icon name="pencil"> </ion-icon>
   </ion-buttons>
   <ion-buttons routerLink="/ajustes" slot="end">
     <ion-icon name="settings"></ion-icon>
-  </ion-buttons>
+  </ion-buttons-->
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -19,7 +19,21 @@
   </ion-toolbar>
 </ion-footer>
 
+
 <ion-content>
+
+  <ion-fab  vertical="top" horizontal="end" edge slot="fixed">
+    <ion-fab-button size="small" color="clear">
+      <ion-icon name="ellipsis-vertical"></ion-icon>  
+    </ion-fab-button>
+    <ion-fab-list side="start">  
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <ion-fab-button  color="clear" routerLink="/ajustes"><ion-icon name="settings" color="primary"></ion-icon></ion-fab-button>
+      <ion-fab-button  color="clear"  routerLink="/editar-perfil"> <ion-icon name="create" color="primary"></ion-icon></ion-fab-button>    
+    </ion-fab-list>
+    </ion-fab>
+
   <ion-grid >
     <ion-row> 
       <ion-col>
