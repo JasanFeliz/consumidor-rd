@@ -50,6 +50,10 @@ const routes: Routes = [
     path: 'valorar-opinar',
     loadChildren: () => import('./valorar-opinar/valorar-opinar.module').then( m => m.ValorarOpinarPageModule)
   },
+  {
+    path: 'valoraciones-opiniones',
+    loadChildren: () => import('./valoraciones-opiniones/valoraciones-opiniones.module').then( m => m.ValoracionesOpinionesPageModule)
+  },
 
   
 
