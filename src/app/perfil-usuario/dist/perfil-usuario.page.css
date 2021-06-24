@@ -1,2 +1,18 @@
-/* No CSS */
+/*ion-label {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    margin-right: 150px;
+    margin-left: 80px;}
+*/
+img {
+  height: 150px;
+  width: 155px;
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
 /*# sourceMappingURL=perfil-usuario.page.css.map */

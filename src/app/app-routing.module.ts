@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'verificar-cuenta',
     loadChildren: () => import('./verificar-cuenta/verificar-cuenta.module').then( m => m.VerificarCuentaPageModule)
   },
+  {
+    path: 'valorar-opinar',
+    loadChildren: () => import('./valorar-opinar/valorar-opinar.module').then( m => m.ValorarOpinarPageModule)
+  },
 
   
 
