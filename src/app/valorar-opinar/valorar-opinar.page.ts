@@ -7,6 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValorarOpinarPage implements OnInit {
 
+
+  estrellas: Array<any>=[
+    {
+    estrella: 1,
+    icon:'ion-ios-star-outline'
+    },
+    {
+    estrella: 2,
+    icon:'ion-ios-star-outline'
+    },
+    {
+    estrella: 3,
+    icon:'ion-ios-star-outline'
+    },
+    {
+    estrella: 4,
+    icon:'ion-ios-star-outline'
+    },
+    {
+    estrella: 5,
+    icon:'ion-ios-star-outline'
+    }
+    ];
   constructor() { }
 
   ngOnInit() {
