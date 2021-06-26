@@ -54,6 +54,10 @@ const routes: Routes = [
     path: 'valoraciones-opiniones',
     loadChildren: () => import('./valoraciones-opiniones/valoraciones-opiniones.module').then( m => m.ValoracionesOpinionesPageModule)
   },
+  {
+    path: 'historial-opiniones',
+    loadChildren: () => import('./historial-opiniones/historial-opiniones.module').then( m => m.HistorialOpinionesPageModule)
+  },
 
   
 
