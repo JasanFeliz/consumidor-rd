@@ -1,1 +1,0 @@
-{"version":3,"sources":["valoraciones-opiniones.page.scss"],"names":[],"mappings":"AAAA,kBACE,aAAc,MACd,KAAM,MACN,OAAQ","file":"valoraciones-opiniones.page.min.css","sourcesContent":["ion-skeleton-text {\r\n    --background\t: green;\r\n  \r\n    size: large;\r\n  \r\n    margin: 0; \r\n  }\r\n  "]}

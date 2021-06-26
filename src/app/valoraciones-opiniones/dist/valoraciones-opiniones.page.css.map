@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["valoraciones-opiniones.page.scss"],"sourcesContent":["ion-skeleton-text {\r\n    --background\t: green;\r\n  \r\n    size: large;\r\n  \r\n    margin: 0; \r\n  }\r\n  "],"file":"valoraciones-opiniones.page.css"}
