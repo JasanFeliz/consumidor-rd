@@ -14,10 +14,9 @@ export class RegistrarUsuarioPage implements OnInit {
 constructor() { }
   
   
-ngOnInit() {}
-
-
-
+ngOnInit() 
+    
+{}
 
 
 }
