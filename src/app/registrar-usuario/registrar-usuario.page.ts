@@ -11,7 +11,7 @@ export class RegistrarUsuarioPage implements OnInit {
 
   usuario = this.fb.group({
     nombre: ['', [Validators.required, Validators.minLength(4)]],
-    apellidos: ['', [Validators.required, Validators.minLength(8)]],
+    apellidos: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', Validators.email],
     contrasena: ['', [Validators.required, Validators.minLength(8)]],
     confirmarcontrasena: ['', [Validators.required, Validators.minLength(8)]],
