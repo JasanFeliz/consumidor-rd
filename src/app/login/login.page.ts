@@ -10,8 +10,11 @@ export class LoginPage implements OnInit {
 
     login = this.fb.group({
     contrasena: ['', [Validators.required, Validators.minLength(6)]],
-    email: ['', Validators.email],
+    email: ['', Validators.compose([Validators.minLength(10), Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'), Validators.required])]
   });
+  
+  
+ 
 
 
   constructor(private fb: FormBuilder) { }

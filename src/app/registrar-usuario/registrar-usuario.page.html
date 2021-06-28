@@ -36,7 +36,7 @@
                 <ion-icon name="mail-outline" slot="start"></ion-icon>
                 <ion-input formControlName="email" placeholder="Email" type="email"></ion-input>
                 </ion-item>
-                <ion-label color="danger" *ngIf="usuario.controls.email.errors?.email && (usuario.touched || usuario.dirty)">* El email no es válido.</ion-label> 
+                <ion-label color="danger" *ngIf="usuario.controls.email.errors?.required && (usuario.touched || usuario.dirty)">*Por favor ingrese su email</ion-label> 
                 <ion-item>
                 <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
                 <ion-input formControlName="contrasena"placeholder="Contraseña" type="password"></ion-input>
@@ -55,7 +55,7 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-button type="submit" [disabled]="!usuario.valid" expand="block">Guardar</ion-button>
+      <ion-button type="submit" [disabled]="!usuario.valid" expand="block">Registrarme</ion-button>
     </ion-col>
 </ion-row>
 
