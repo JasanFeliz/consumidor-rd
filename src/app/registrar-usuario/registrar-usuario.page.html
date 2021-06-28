@@ -25,7 +25,7 @@
                 <ion-input formControlName="nombre" placeholder="Nombre" type="text"></ion-input>
                 </ion-item>
                 <ion-label color="danger" *ngIf="usuario.controls.nombre.errors?.required && (usuario.touched || usuario.dirty)">*Por favor ingrese su nombre</ion-label>
-                <ion-label color="danger" *ngIf="usuario.controls.nombre.errors?.minlength && (usuario.touched || usuario.dirty)">*El nombre tiene que tener al menos 4 caracteres.</ion-label>
+                <ion-label color="danger" *ngIf="usuario.controls.nombre.errors?.minlength && (usuario.touched || usuario.dirty)">*El nombre tiene que tener al menos 3 caracteres.</ion-label>
                 <ion-item>
                 <ion-icon name="person" slot="start"></ion-icon>
                 <ion-input formControlName="apellidos" placeholder="Apellidos" type="text"></ion-input>
