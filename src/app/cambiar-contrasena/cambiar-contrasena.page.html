@@ -7,38 +7,41 @@
   </ion-toolbar>
   </ion-header>
 
-<ion-content>
+    <ion-content>
 
-  <form>
-    <ion-row>
-      <ion-col>
-          <ion-list>
-            <ion-item>
-              <center><h3>Introduzca los datos para realizar el cambio de contraseña </h3></center>
-            </ion-item>
-            <br>
-              <ion-item>
-                <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-                <ion-input name="actual-contrasena" type="password" required placeholder="Contraseña Actual"></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-icon name="key-outline" slot="start"></ion-icon>
-                <ion-input name="nueva-contrasena" type="password" required placeholder="Nueva Contraseña"></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-icon name="lock-closed" slot="start"></ion-icon>
-                <ion-input name="confirmar-contrasena" type="password" required placeholder="Confirmar Contraseña"></ion-input>
-              </ion-item>
-          </ion-list>
-      </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-        <ion-button type="submit" fill="solid" expand="block">
-          Cambiar
-        </ion-button>
+  
+     <ion-row>
+     <ion-col>
+     <br/>
+     <ion-list>
+        <form [formGroup]="contrasena" (ngSubmit)="guardarDatos()">    
+        <ion-item>
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-input formControlName="contrasenaActual" placeholder="Actual contraseña" type="password"></ion-input>
+        </ion-item>
+        <ion-label color="danger" *ngIf="contrasena.controls.contrasenaActual.errors?.required && (contrasena.touched || contrasena.dirty)">*Todo los campos son obligatorios </ion-label>
+        <ion-label color="danger" *ngIf="contrasena.controls.contrasenaActual.errors?.minlength && (contrasena.touched || contrasena.dirty)">*La contraseña tiene que tener al menos 6 caracteres.</ion-label>
+        <ion-item>
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+        <ion-input formControlName="contrasenaNueva"placeholder=" Nueva contraseña" type="password"></ion-input>
+        </ion-item>
+        <ion-label color="danger" *ngIf="contrasena.controls.contrasenaNueva.errors?.required && (contrasena.touched || contrasena.dirty)">*Todo los campos son obligatorios </ion-label>
+        <ion-label color="danger" *ngIf="contrasena.controls.contrasenaNueva.errors?.minlength && (contrasena.touched || contrasena.dirty)">*La contraseña tiene que tener al menos 6 caracteres.</ion-label>
+        <ion-item>
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+        <ion-input formControlName="confirmarcontrasena"placeholder="Confirmar contraseña" type="password"></ion-input>
+        </ion-item>
+        <ion-label color="danger" *ngIf="contrasena.controls.confirmarcontrasena.errors?.required && (contrasena.touched || contrasena.dirty)">*Todo los campos son obligatorios </ion-label>
+        <ion-label color="danger" *ngIf="contrasena.controls.confirmarcontrasena.errors?.minlength && (contrasena.touched || contrasena.dirty)">*La contraseña tiene que tener al menos 6 caracteres.</ion-label>   
+    </form>
+    </ion-list>
     </ion-col>
-</ion-row>
-  </form>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+    <ion-button type="submit" [disabled]="!contrasena.valid" expand="block">Guardar</ion-button>
+    </ion-col>
+    </ion-row>
+  
 
-</ion-content>
+   </ion-content>

@@ -17,37 +17,45 @@
   </ion-row>
     <ion-row>
       <ion-col>
-          <ion-list>
-            <form >
-              <ion-item>
-              <ion-icon name="person-outline" slot="start"></ion-icon>
-              <ion-input name="firstname" type="text" required placeholder="Nombre"></ion-input>
-              </ion-item>
-              <ion-item>
-              <ion-icon name="person" slot="start"></ion-icon>
-              <ion-input name="lastname" type="text" required placeholder="Apellidos"></ion-input>
-              </ion-item>
-              <ion-item>
-              <ion-icon name="mail-outline" slot="start" ></ion-icon>
-              <ion-input name="email" type="email" required placeholder="Email"></ion-input>
-              </ion-item>
-              <ion-item>
-              <ion-icon name="key-outline" slot="start" ></ion-icon>
-              <ion-input name="password" type="password" required placeholder="Contraseña" minlength="8" ></ion-input>
-              </ion-item>
-              <ion-item>
-              <ion-icon name="lock-closed-outline" slot="start" ></ion-icon>
-              <ion-input name="password1" type="password" required placeholder="Confirmar Contraseña" minlength="8" ></ion-input>
-          </ion-item>
-            </form>
+
+            <ion-list>
+              <form [formGroup]="usuario" (ngSubmit)="guardarDatos()">
+                <ion-item>
+                <ion-icon name="person-outline" slot="start"></ion-icon>
+                <ion-input formControlName="nombre" placeholder="Nombre" type="text"></ion-input>
+                </ion-item>
+                <ion-label color="danger" *ngIf="usuario.controls.nombre.errors?.required && (usuario.touched || usuario.dirty)">*Todo los campos son obligatorios</ion-label>
+                <ion-label color="danger" *ngIf="usuario.controls.nombre.errors?.minlength && (usuario.touched || usuario.dirty)">*El nombre tiene que tener al menos 4 caracteres.</ion-label>
+                <ion-item>
+                <ion-icon name="person" slot="start"></ion-icon>
+                <ion-input formControlName="apellidos" placeholder="Apellidos" type="text"></ion-input>
+                </ion-item>
+                <ion-label color="danger" *ngIf="usuario.controls.apellidos.errors?.required && (usuario.touched || usuario.dirty)">*Todo los campos son obligatorios </ion-label>
+                <ion-label color="danger" *ngIf="usuario.controls.apellidos.errors?.minlength && (usuario.touched || usuario.dirty)">*Los apellidos tiene que tener al menos 8 caracteres.</ion-label>
+                <ion-item>
+                <ion-icon name="mail-outline" slot="start"></ion-icon>
+                <ion-input formControlName="email" placeholder="Email" type="email"></ion-input>
+                </ion-item>
+                <ion-label color="danger" *ngIf="usuario.controls.email.errors?.email && (usuario.touched || usuario.dirty)">* El email no es válido.</ion-label> 
+                <ion-item>
+                <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                <ion-input formControlName="contrasena"placeholder="Contraseña" type="password"></ion-input>
+                </ion-item>
+                <ion-label color="danger" *ngIf="usuario.controls.contrasena.errors?.required && (usuario.touched || usuario.dirty)">*Todo los campos son obligatorios </ion-label>
+                <ion-label color="danger" *ngIf="usuario.controls.contrasena.errors?.minlength && (usuario.touched || usuario.dirty)">*La contraseña tiene que tener al menos 6 caracteres.</ion-label>
+                <ion-item>
+                <ion-icon name="key-outline" slot="start"></ion-icon>
+                <ion-input formControlName="confirmarcontrasena"placeholder="Confirmar contraseña" type="password"></ion-input>
+                </ion-item>
+                <ion-label color="danger" *ngIf="usuario.controls.confirmarcontrasena.errors?.required && (usuario.touched || usuario.dirty)">*Todo los campos son obligatorios </ion-label>
+                <ion-label color="danger" *ngIf="usuario.controls.confirmarcontrasena.errors?.minlength && (usuario.touched || usuario.dirty)">*La contraseña tiene que tener al menos 6 caracteres.</ion-label>
+              </form>
           </ion-list>
       </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-        <ion-button type="submit" fill="solid" expand="block">
-          Registarme
-        </ion-button>
+      <ion-button type="submit" [disabled]="!usuario.valid" expand="block">Guardar</ion-button>
     </ion-col>
 </ion-row>
 

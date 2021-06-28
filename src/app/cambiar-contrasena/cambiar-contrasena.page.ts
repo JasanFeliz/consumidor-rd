@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cambiar-contrasena',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CambiarContrasenaPage implements OnInit {
 
-  constructor() { }
+
+  contrasena = this.fb.group({
+    contrasenaActual: ['', [Validators.required, Validators.minLength(6)]],
+    contrasenaNueva: ['', [Validators.required, Validators.minLength(6)]],
+    confirmarcontrasena: ['', [Validators.required, Validators.minLength(6)]],
+  });
+  
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 
 @Component({
@@ -8,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarUsuarioPage implements OnInit {
 
-  
+  usuario = this.fb.group({
+    nombre: ['', [Validators.required, Validators.minLength(4)]],
+    apellidos: ['', [Validators.required, Validators.minLength(8)]],
+    email: ['', Validators.email],
+    contrasena: ['', [Validators.required, Validators.minLength(8)]],
+    confirmarcontrasena: ['', [Validators.required, Validators.minLength(8)]],
+  });
 
 
-constructor() { }
+constructor(private fb: FormBuilder) { }
   
   
 ngOnInit() 
