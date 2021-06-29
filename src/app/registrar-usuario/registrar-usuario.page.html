@@ -15,9 +15,10 @@
   <h1>Bienvenid@</h1>
   </ion-col>
   </ion-row>
+
+  <ion-grid>
     <ion-row>
       <ion-col>
-
             <ion-list>
               <form [formGroup]="usuario">
                 <ion-item>
@@ -53,6 +54,7 @@
           </ion-list>
       </ion-col>
   </ion-row>
+  </ion-grid>
   <ion-row>
     <ion-col>
       <ion-button type="submit" [disabled]="!usuario.valid" expand="block">Registrarme</ion-button>
