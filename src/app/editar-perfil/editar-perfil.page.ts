@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarPerfilPage implements OnInit {
 
-  constructor() { }
+  editarperfil = this.fb.group({
+    nombre: ['', [Validators.required, Validators.minLength(3)]],
+    apellidos: ['', [Validators.required, Validators.minLength(3)]],
+   
+  });
+  
 
-  ngOnInit() {
-  }
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit() {}
 
 }

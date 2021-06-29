@@ -7,43 +7,48 @@
   </ion-toolbar>
   </ion-header>
 
-<ion-content>
-  <form>
-    <ion-row>
-      <ion-col>
-        <center> 
-          <img src ="assets/images/fotoperfil.png">
-        <ion-button color="clear" slots="end">
-          <ion-icon name="camera" color="primary"></ion-icon>  
-        </ion-button>
-        <ion-button  color="clear" slots="start">
-          <ion-icon name="images-outline"color="primary"></ion-icon>
-        </ion-button>
-      </center>
-      </ion-col>
-  </ion-row>
-    <ion-row>
-      <ion-col>
-          <ion-list>
-              <ion-item>
-                <ion-icon name="person-outline" slot="start"></ion-icon>
-                <ion-input name="name" type="text" required placeholder="Nombre"></ion-input>
+   <ion-content>
+
+     <ion-row>
+     <ion-col>
+     <center> 
+     <ion-avatar><img src ="assets/images/fotoperfil.png"> </ion-avatar>
+     <ion-button color="clear" slots="end">
+     <ion-icon name="camera" color="primary"></ion-icon>  
+     </ion-button>
+     <ion-button  color="clear" slots="start">
+     <ion-icon name="images-outline"color="primary"></ion-icon>
+     </ion-button>
+     </center>
+     </ion-col>
+     </ion-row>
+
+          <ion-row>
+          <ion-col>
+           <ion-list>
+            <form [formGroup]="editarperfil">
+            <ion-item>
+              <ion-icon name="person-outline" slot="start"></ion-icon>
+              <ion-input formControlName="nombre" placeholder="Nombre" type="text"></ion-input>
               </ion-item>
+              <ion-label color="danger" *ngIf="editarperfil.controls.nombre.errors?.required && (editarperfil.touched || editarperfil.dirty)">*Ingrese el dato que desea cambiar</ion-label>
+              <ion-label color="danger" *ngIf="editarperfil.controls.nombre.errors?.minlength && (editarperfil.touched || editarperfil.dirty)">*El nombre tiene que tener al menos 3 caracteres.</ion-label>
               <ion-item>
-                <ion-icon name="person" slot="start"></ion-icon>
-                <ion-input name="lastname" type="text" required placeholder="Apellidos"></ion-input>
+              <ion-icon name="person" slot="start"></ion-icon>
+              <ion-input formControlName="apellidos" placeholder="Apellidos" type="text"></ion-input>
               </ion-item>
-          </ion-list>
+              <ion-label color="danger" *ngIf="editarperfil.controls.apellidos.errors?.required && (editarperfil.touched || editarperfil.dirty)">*Ingrese el dato que desea cambiar</ion-label>
+              <ion-label color="danger" *ngIf="editarperfil.controls.apellidos.errors?.minlength && (editarperfil.touched || editarperfil.dirty)">*El nombre tiene que tener al menos 3 caracteres.</ion-label>
+             </form>
+             </ion-list>
           <br>
       </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-        <ion-button type="submit" fill="solid" expand="block" routerLink="/perfil-usuario">
-          Guardar cambios
-        </ion-button>
+      <ion-button type="submit" [disabled]="!editarperfil.valid" expand="block">Gurdar cambios</ion-button>
     </ion-col>
 </ion-row>
-  </form>
+
 
 </ion-content>

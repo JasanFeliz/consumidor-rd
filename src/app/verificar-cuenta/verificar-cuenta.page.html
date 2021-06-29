@@ -9,40 +9,48 @@
 </ion-header>
 
 <ion-content>
-  <form>
-  <ion-grid>
-    <ion-row>
-    <ion-col>
-  <ion-list>
-    <ion-item>
-      <center><h3>Introduzca los datos para la verificación de cuenta </h3></center>
-    </ion-item>
-    <br>
-    <ion-item>
-    <ion-icon name="person-outline" slot="start"></ion-icon>
-    <ion-input name="name" type="text" required placeholder="Nombre de usuario"></ion-input>
-    </ion-item>
-    <br>
-    <ion-item>
-    <ion-icon name="mail-outline" slot="start" ></ion-icon>
-    <ion-input name="email" type="email" required placeholder="Email"></ion-input>
-    </ion-item>
-    <br>
-    <ion-item>
-    <ion-icon name="call-outline" slot="start" ></ion-icon>
-    <ion-input name="phone" type="text" required placeholder="Telefono" minlength="8" ></ion-input>
+  
+<ion-grid>
+<ion-row>
+<ion-col>
+<ion-list>
+<center><h3>Introduzca los datos para la verificación de cuenta </h3></center>
+  <form [formGroup]="verificar">
+  <ion-item>
+  <ion-icon name="person-outline" slot="start"></ion-icon>
+  <ion-input formControlName="nombre" placeholder="Nombre" type="text"></ion-input>
   </ion-item>
+  <ion-label color="danger" *ngIf="verificar.controls.nombre.errors?.required && (verificar.touched || verificar.dirty)">*Por favor ingrese el nombre</ion-label>
+  <ion-label color="danger" *ngIf="verificar.controls.nombre.errors?.minlength && (verificar.touched || verificar.dirty)">*El nombre tiene que tener al menos 3 caracteres.</ion-label>
+  <ion-item>
+  <ion-icon name="person" slot="start"></ion-icon>
+  <ion-input formControlName="apellidos" placeholder="Apellidos" type="text"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="verificar.controls.apellidos.errors?.required && (verificar.touched || verificar.dirty)">*Por favor ingrese el apellidos </ion-label>
+  <ion-label color="danger" *ngIf="verificar.controls.apellidos.errors?.minlength && (verificar.touched || verificar.dirty)">*Los apellidos tiene que tener al menos 3 caracteres.</ion-label>
+  <ion-item>
+  <ion-icon name="mail-outline" slot="start"></ion-icon>
+  <ion-input formControlName="email" placeholder="Email" type="email"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="verificar.controls.email.errors?.required && (verificar.touched || verificar.dirty)">*Por favor ingrese el email</ion-label> 
+  <ion-item>
+  <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+  <ion-input formControlName="numero" placeholder="Celular" type="phone"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="verificar.controls.numero.errors?.required && (verificar.touched || verificar.dirty)">*Por favor ingrese el número de celular</ion-label>
+  <ion-label color="danger" *ngIf="verificar.controls.numero.errors?.minlength && (verificar.touched || verificar.dirty)">*El número tiene que tener al menos 10 caracteres.</ion-label>
+</form>
 </ion-list>
 </ion-col>
 </ion-row>
-<br>
-  <ion-row>
-    <ion-col>
-      <ion-button type="submit" fill="solid" expand="block" routerLink="/recuperar-contrasena">  
-        Verificar
-        </ion-button>
-    </ion-col>
-  </ion-row>
 </ion-grid>
-</form>
+
+<br>
+<ion-row>
+<ion-col>
+<ion-button type="submit" [disabled]="!verificar.valid" expand="block">Verificar</ion-button>
+</ion-col>
+</ion-row>
+
+
 </ion-content>

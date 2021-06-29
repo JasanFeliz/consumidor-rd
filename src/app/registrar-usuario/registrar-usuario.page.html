@@ -19,7 +19,7 @@
       <ion-col>
 
             <ion-list>
-              <form [formGroup]="usuario" (ngSubmit)="guardarDatos()">
+              <form [formGroup]="usuario">
                 <ion-item>
                 <ion-icon name="person-outline" slot="start"></ion-icon>
                 <ion-input formControlName="nombre" placeholder="Nombre" type="text"></ion-input>
@@ -36,7 +36,7 @@
                 <ion-icon name="mail-outline" slot="start"></ion-icon>
                 <ion-input formControlName="email" placeholder="Email" type="email"></ion-input>
                 </ion-item>
-                <ion-label color="danger" *ngIf="usuario.controls.email.errors?.required && (usuario.touched || usuario.dirty)">*Por favor ingrese su email</ion-label> 
+                <ion-label color="danger" *ngIf="usuario.controls.email.errors?.required && (usuario.touched || usuario.dirty)">*Por favor ingrese un email</ion-label> 
                 <ion-item>
                 <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
                 <ion-input formControlName="contrasena"placeholder="Contraseña" type="password"></ion-input>

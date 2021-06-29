@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-valorar-opinar',
@@ -30,7 +31,18 @@ export class ValorarOpinarPage implements OnInit {
     icon:'ion-ios-star-outline'
     }
     ];
-  constructor() { }
+
+
+   opiniones = this.fb.group({
+
+   titulo: ['', [Validators.required, Validators.minLength(3)]],
+   opinion:  ['', [Validators.required, Validators.minLength(3)]],
+
+   });
+
+
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }

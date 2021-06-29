@@ -8,50 +8,53 @@
 </ion-header>
 <br>
 <br>
-<ion-content>
-  <center>
-    <h4>Califique el servicio</h4>
-      <ion-button color="clear" *ngFor = "let item of estrellas">
-      <ion-icon color="warning" name="star-outline"></ion-icon>
-    </ion-button>
 
-  </center>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
+<ion-content>
+<center>
+<h4>Valore su experencia con estas estrellas</h4>
+<br>
+<ion-button color="clear" *ngFor = "let item of estrellas">
+<ion-icon color="warning" name="star-outline"></ion-icon>
+</ion-button>
+</center>
+ 
+<ion-grid>
+<ion-row>
+<ion-col>
 
   <ion-list>
-    <ion-item>
-      <h4>Escriba una opinión</h4>
-    </ion-item>
-    <ion-item>
-      <ion-input name="tema-opinion" type="text" required placeholder="Titulo"></ion-input>
-  </ion-item>
+  <h4> Exprese su experencia</h4>
+  <form [formGroup]="opiniones">
   <ion-item>
-    
-    <ion-textarea required placeholder="Escriba su opinión"></ion-textarea>
-    <br>
-<br>
-<br>    
-<br>
-<br>
-<br>
-</ion-item>
+  <ion-icon name="text-outline" slot="start"></ion-icon>
+  <ion-input formControlName="titulo" placeholder="Titulo" type="text"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese el titulo</ion-label>
+  <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.minlength && (opiniones.touched || opiniones.dirty)">*El titulo tiene que tener al menos 3 caracteres.</ion-label>
+  <br>
+  <br>
+  <br>
+  <br>
+  <ion-item>    
+  <ion-icon name="clipboard-outline" slot="start"></ion-icon>
+  <br>
+  <br>
+  <br>
+  <ion-input formControlName="opinion" placeholder="Escriba su opinión" type="text"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="opiniones.controls.opinion.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese la opinión</ion-label>
+  <ion-label color="danger" *ngIf="opiniones.controls.opinion.errors?.minlength && (opiniones.touched || opiniones.dirty)">*La opinión tiene que tener al menos 3 caracteres.</ion-label>
+  </form>
 </ion-list>
-<br>
-<br>
-<br>
-<br>
-<ion-button type="submit" fill="solid" expand="block" routerLink="/valoraciones-opiniones">  
-Enviar opinión
-</ion-button>
-      </ion-col>
-  </ion-row>
+</ion-col>
+</ion-row>
 </ion-grid>
+  <ion-row>
+  <ion-col>
+  <ion-button type="submit" [disabled]="!opiniones.valid" expand="block">Enviar</ion-button>
+  </ion-col>
+  </ion-row>
 
-<!--span>
-  <ion-icon name="star-outline"color="primary"></ion-icon>
-</span-->
 
 </ion-content>
 
