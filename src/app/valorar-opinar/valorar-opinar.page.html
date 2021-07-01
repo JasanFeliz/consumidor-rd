@@ -27,20 +27,17 @@
   <form [formGroup]="opiniones">
   <ion-item>
   <ion-icon name="text-outline" slot="start"></ion-icon>
-  <ion-input formControlName="titulo" placeholder="Titulo" type="text"></ion-input>
+  <ion-input formControlName="titulo" placeholder="Título" type="text"></ion-input>
   </ion-item>
   <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese el titulo</ion-label>
-  <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.minlength && (opiniones.touched || opiniones.dirty)">*El titulo tiene que tener al menos 3 caracteres.</ion-label>
+  <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.minlength && (opiniones.touched || opiniones.dirty)">*El título tiene que tener al menos 3 caracteres.</ion-label>
   <br>
   <br>
   <br>
   <br>
   <ion-item>    
   <ion-icon name="clipboard-outline" slot="start"></ion-icon>
-  <br>
-  <br>
-  <br>
-  <ion-input formControlName="opinion" placeholder="Escriba su opinión" type="text"></ion-input>
+  <ion-textarea formControlName="opinion" placeholder="Escriba su opinión"></ion-textarea>
   </ion-item>
   <ion-label color="danger" *ngIf="opiniones.controls.opinion.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese la opinión</ion-label>
   <ion-label color="danger" *ngIf="opiniones.controls.opinion.errors?.minlength && (opiniones.touched || opiniones.dirty)">*La opinión tiene que tener al menos 3 caracteres.</ion-label>
@@ -49,11 +46,11 @@
 </ion-col>
 </ion-row>
 </ion-grid>
-  <ion-row>
-  <ion-col>
-  <ion-button type="submit" [disabled]="!opiniones.valid" expand="block">Enviar</ion-button>
-  </ion-col>
-  </ion-row>
+ <ion-row>
+<ion-col>
+<ion-button type="submit" [disabled]="!opiniones.valid" expand="block">Enviar</ion-button>
+</ion-col>
+</ion-row>
 
 
 </ion-content>
