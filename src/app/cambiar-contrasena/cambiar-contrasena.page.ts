@@ -34,9 +34,6 @@ export class CambiarContrasenaPage implements OnInit {
       this.passwordIcon2 = this.passwordIcon2 === 'eye-off' ? 'eye' : 'eye-off';
   }
 
-
-
-
   contrasena = this.fb.group({
     contrasenaActual: ['', [Validators.required, Validators.minLength(6)]],
     contrasenaNueva: ['', [Validators.required, Validators.minLength(6)]],

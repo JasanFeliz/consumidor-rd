@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-recuperar-contrasena',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecuperarContrasenaPage implements OnInit {
 
-  constructor() { }
+
+
+
+  recuperarC = this.fb.group({
+    email: ['', Validators.compose([Validators.minLength(10), Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'), Validators.required])]
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }

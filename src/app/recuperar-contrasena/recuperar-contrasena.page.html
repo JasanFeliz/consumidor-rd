@@ -1,43 +1,35 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Recuperación de contraseña</ion-title>
-    <ion-buttons>
-      <ion-back-button> </ion-back-button>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-title>Recuperar contraseña</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-          
-  <ion-list>
-    <ion-item>
-      <center><h3>Introduzca una nueva contraseña </h3></center>
-    </ion-item>
-    <br>
-    <ion-item>
-      <ion-icon name="key-outline" slot="start" ></ion-icon>
-      <ion-input name="password" type="password" required placeholder="Contraseña" minlength="8" ></ion-input>
-  </ion-item>
-  <br>
-  <ion-item>
-    <ion-icon name="lock-closed-outline" slot="start" ></ion-icon>
-    <ion-input name="password1" type="password" required placeholder="Confirmar Contraseña" minlength="8" ></ion-input>
+<ion-grid>
+<ion-row>
+<ion-col>
+<ion-list>
+<form [formGroup]="recuperarC" >
+<ion-item>
+<ion-icon name="mail-outline" slot="start"></ion-icon>
+<ion-input formControlName="email" placeholder="Email" type="email"></ion-input>   
 </ion-item>
+<ion-label color="primary" *ngIf="recuperarC.controls.email.errors?.required && (recuperarC.touched || recuperarC.dirty)">*Ingrese su email</ion-label> 
+</form>
+<br>
+<ion-label>Le enviaremos su contraseña a su dirección de correo electrónico dada</ion-label>
 </ion-list>
-<br> 
-<br>
-<br>
-<br>
-<br>
-<ion-button type="submit" fill="solid" expand="block">  
-  Guardar contraseña
-</ion-button>
-      </ion-col>
-  </ion-row>
+</ion-col>
+</ion-row>
+<ion-row>
+<ion-col>
+<ion-button type="submit" [disabled]="!recuperarC.valid" expand="block">Recuperar</ion-button>
+</ion-col>
+</ion-row>
 </ion-grid>
 </ion-content>
 
