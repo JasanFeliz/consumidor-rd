@@ -1,13 +1,15 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Evaluar experiencia</ion-title>
-  </ion-toolbar>
+<ion-toolbar color="primary">
+<ion-buttons slot="start">
+<ion-back-button></ion-back-button>
+</ion-buttons>
+<ion-title>Evaluar experiencia</ion-title>
+</ion-toolbar>
 </ion-header>
 <br>
 <br>
+
+ <!-- inicio del content o body de la app-->
 
 <ion-content>
 <center>
@@ -21,9 +23,10 @@
 <ion-grid>
 <ion-row>
 <ion-col>
+<ion-list>
+<h4> Exprese su experencia</h4>
 
-  <ion-list>
-  <h4> Exprese su experencia</h4>
+<!-- inicio del formulario de la app-->
   <form [formGroup]="opiniones">
   <ion-item>
   <ion-icon name="text-outline" slot="start"></ion-icon>
@@ -42,16 +45,17 @@
   <ion-label color="danger" *ngIf="opiniones.controls.opinion.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese la opinión</ion-label>
   <ion-label color="danger" *ngIf="opiniones.controls.opinion.errors?.minlength && (opiniones.touched || opiniones.dirty)">*La opinión tiene que tener al menos 3 caracteres.</ion-label>
   </form>
+<!-- fianl del formulario de la app-->
 </ion-list>
 </ion-col>
 </ion-row>
 </ion-grid>
  <ion-row>
 <ion-col>
+<!-- Boton de la app-->
 <ion-button type="submit" [disabled]="!opiniones.valid" expand="block">Enviar</ion-button>
 </ion-col>
 </ion-row>
 
-
 </ion-content>
-
+ <!-- Final del content o body de la app-->

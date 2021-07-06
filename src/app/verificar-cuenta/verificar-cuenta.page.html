@@ -1,13 +1,15 @@
 
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Verificar Cuenta</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="home"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
+<ion-toolbar color="primary">
+<ion-title>Verificar Cuenta</ion-title>
+<ion-buttons slot="start">
+<ion-back-button defaultHref="home"></ion-back-button>
+</ion-buttons>
+</ion-toolbar>
 </ion-header>
 
+
+<!-- inicio del content o body de la app-->
 <ion-content>
   
 <ion-grid>
@@ -15,6 +17,8 @@
 <ion-col>
 <ion-list>
 <center><h3>Introduzca los datos para la verificación de cuenta </h3></center>
+
+ <!-- inicio del formulario de verificar cuenta-->
   <form [formGroup]="verificar">
   <ion-item>
   <ion-icon name="person-outline" slot="start"></ion-icon>
@@ -40,17 +44,20 @@
   <ion-label color="danger" *ngIf="verificar.controls.numero.errors?.required && (verificar.touched || verificar.dirty)">*Por favor ingrese el número de celular</ion-label>
   <ion-label color="danger" *ngIf="verificar.controls.numero.errors?.minlength && (verificar.touched || verificar.dirty)">*El número tiene que tener al menos 10 caracteres.</ion-label>
 </form>
+<!-- final del formulario de verficcar cuenta-->
 </ion-list>
 </ion-col>
 </ion-row>
 </ion-grid>
-
 <br>
 <ion-row>
 <ion-col>
+<!-- Boton de verificar-->
 <ion-button type="submit" [disabled]="!verificar.valid" expand="block">Verificar</ion-button>
+<!--fin del boton-->
 </ion-col>
 </ion-row>
 
-
 </ion-content>
+
+<!-- Final del content o body de la app-->

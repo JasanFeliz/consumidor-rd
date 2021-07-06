@@ -8,6 +8,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class VerificarCuentaPage implements OnInit {
 
+
+   constructor(private fb: FormBuilder) { }
+
   verificar = this.fb.group({
     nombre: ['', [Validators.required, Validators.minLength(3)]],
     apellidos: ['', [Validators.required, Validators.minLength(3)]],
@@ -15,10 +18,7 @@ export class VerificarCuentaPage implements OnInit {
     numero: ['',[Validators.required, Validators.minLength(11)]]
   });
   
-  
-  
-  
-  constructor(private fb: FormBuilder) { }
+
 
   ngOnInit() {
   }

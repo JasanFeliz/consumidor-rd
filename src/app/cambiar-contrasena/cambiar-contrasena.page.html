@@ -1,19 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Cambiar Contraseña</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="ajuste"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-  </ion-header>
+<ion-toolbar>
+<ion-title>Cambiar Contraseña</ion-title>
+<ion-buttons slot="start">
+<ion-back-button defaultHref="ajuste"></ion-back-button>
+</ion-buttons>
+</ion-toolbar>
+</ion-header>
 
+<!-- inicio del content o body de la app-->
     <ion-content>
 
-  
      <ion-row>
      <ion-col>
      <br/>
      <ion-list>
+<!-- inicio del formulario de camnbio de contrasena -->
         <form [formGroup]="contrasena" (ngSubmit)="guardarDatos()">    
         <ion-item>
         <ion-icon name="lock-closed" slot="start"></ion-icon>
@@ -37,14 +38,18 @@
         <ion-label color="danger" *ngIf="contrasena.controls.confirmarcontrasena.errors?.required && (contrasena.touched || contrasena.dirty)">*Confirme su nueva contraseña </ion-label>
         <ion-label color="danger" *ngIf="contrasena.controls.confirmarcontrasena.errors?.minlength && (contrasena.touched || contrasena.dirty)">*La contraseña tiene que tener al menos 6 caracteres.</ion-label>   
     </form>
+<!-- final del formulario de cambio de contrasena-->
     </ion-list>
     </ion-col>
     </ion-row>
     <ion-row>
     <ion-col>
+    <!-- Boton de guradar cambio de contrasena-->
     <ion-button type="submit" [disabled]="!contrasena.valid" expand="block">Guardar</ion-button>
+    <!-- Boton de guradar cambio de contrasena-->
     </ion-col>
     </ion-row>
   
-
    </ion-content>
+
+  <!-- Final del content o body de la app-->

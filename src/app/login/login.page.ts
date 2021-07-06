@@ -12,11 +12,16 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginPage implements OnInit {
 
+    
+    
+    constructor(private fb: FormBuilder) { }
+    
     login = this.fb.group({
     contrasena: ['', [Validators.required, Validators.minLength(6)]],
     email: ['', Validators.compose([Validators.minLength(10), Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'), Validators.required])]
   });
   
+
   passwordType: string = 'password';
   passwordIcon: string = 'eye-off';
  
@@ -24,9 +29,6 @@ export class LoginPage implements OnInit {
       this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
       this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
   }
-
-
-  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }

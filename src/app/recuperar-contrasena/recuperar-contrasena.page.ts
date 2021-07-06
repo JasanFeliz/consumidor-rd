@@ -9,14 +9,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class RecuperarContrasenaPage implements OnInit {
 
 
-
+ constructor(private fb: FormBuilder) { }
 
   recuperarC = this.fb.group({
     email: ['', Validators.compose([Validators.minLength(10), Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'), Validators.required])]
   });
 
-  constructor(private fb: FormBuilder) { }
-
+  
   ngOnInit() {
   }
 

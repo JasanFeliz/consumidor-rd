@@ -9,6 +9,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegistrarUsuarioPage implements OnInit {
 
+
+constructor(private fb: FormBuilder) { }
+
   usuario = this.fb.group({
     nombre: ['', [Validators.required, Validators.minLength(3)]],
     apellidos: ['', [Validators.required, Validators.minLength(3)]],
@@ -34,9 +37,6 @@ export class RegistrarUsuarioPage implements OnInit {
       this.passwordIcon1 = this.passwordIcon1 === 'eye-off' ? 'eye' : 'eye-off';
   }
 
-constructor(private fb: FormBuilder) { }
-  
-  
 ngOnInit() 
     
 {}

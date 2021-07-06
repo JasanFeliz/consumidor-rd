@@ -1,52 +1,39 @@
-
-
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Ajustes</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="home"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
+<ion-toolbar color="primary">
+<ion-title>Ajustes</ion-title>
+<ion-buttons slot="start">
+<ion-back-button defaultHref="home"></ion-back-button>
+</ion-buttons>
+</ion-toolbar>
 </ion-header>
 
+<!-- inicio del content o body de la app-->
 
 <ion-content>
 
   <ion-grid>
   <ion-row>
   <ion-col>
-    <ion-list>
-    <ion-item>  
-    <h4>Tema oscuro</h4>
-    <ion-toggle (ionChange)='toggleTheme($event)'slot="end"></ion-toggle>
-    </ion-item> 
-    <br>
-    <ion-item>  
-    <h4>Recibir notificaciones</h4>
-    <ion-toggle (ionChange)='toggleTheme($event2)'slot="end"></ion-toggle>
-    </ion-item>
-    <br>
-    <ion-item routerLink="/cambiar-contrasena">
-     <h4>Cambiar Contraseña</h4>
-    </ion-item>
-    <!--ion-item>
-    <h4>Informar acerca de un Error</h4>
-    </ion-item>
-    <ion-item>  
-    <h4>Información de la App</h4>
-    </ion-item>
-    <ion-item routerLink="/verificar-cuenta" >  
-    <h4>Verificar Cuenta</h4>
-    </ion-item>
-    <ion-item>  
-    <h4>Suscribirme</h4>
-    </ion-item-->
+  <ion-list>
+  <ion-item>  
+  <h4>Tema oscuro</h4>
+  <ion-toggle (ionChange)='toggleTheme($event)'slot="end"></ion-toggle>
+  </ion-item> 
+  <br>
+  <ion-item>  
+  <h4>Recibir notificaciones</h4>
+  <ion-toggle (ionChange)='toggleTheme($event2)'slot="end"></ion-toggle>
+  </ion-item>
+  <br>
+  <ion-item routerLink="/cambiar-contrasena">
+  <h4>Cambiar Contraseña</h4>
+  </ion-item> 
   </ion-list>
-</ion-col>
-</ion-row>
-</ion-grid>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
 
 </ion-content>
 
-
+<!-- Final del content o body de la app-->
 

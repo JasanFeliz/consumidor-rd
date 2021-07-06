@@ -33,6 +33,9 @@ export class ValorarOpinarPage implements OnInit {
     ];
 
 
+  constructor(private fb: FormBuilder) { }
+
+
    opiniones = this.fb.group({
 
    titulo: ['', [Validators.required, Validators.minLength(3)]],
@@ -40,9 +43,6 @@ export class ValorarOpinarPage implements OnInit {
 
    });
 
-
-
-  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }

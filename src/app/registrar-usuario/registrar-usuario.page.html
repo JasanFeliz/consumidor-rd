@@ -1,15 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Crear Cuenta</ion-title>
-  </ion-toolbar>
+<ion-toolbar>
+<ion-buttons slot="start">
+<ion-back-button></ion-back-button>
+</ion-buttons>
+<ion-title>Crear Cuenta</ion-title>
+</ion-toolbar>
 </ion-header>
+
+  <!-- inicio del content o body de la app-->
 
 <ion-content>
 
-  
   <ion-row>
   <ion-col>
   <h1>Bienvenid@</h1>
@@ -17,9 +18,10 @@
   </ion-row>
 
   <ion-grid>
-    <ion-row>
-      <ion-col>
-            <ion-list>
+  <ion-row>
+  <ion-col>
+  <ion-list>
+      <!-- inicio del formulario de crear cuenta-->
               <form [formGroup]="usuario">
                 <ion-item>
                 <ion-icon name="person-outline" slot="start"></ion-icon>
@@ -52,16 +54,21 @@
                 </ion-item>
                 <ion-label color="danger" *ngIf="usuario.controls.confirmarcontrasena.errors?.required && (usuario.touched || usuario.dirty)">*Por favor confirme la contraseña </ion-label>
                 <ion-label color="danger" *ngIf="usuario.controls.confirmarcontrasena.errors?.minlength && (usuario.touched || usuario.dirty)">*La contraseña tiene que tener al menos 6 caracteres.</ion-label>
-              </form>
-          </ion-list>
-      </ion-col>
+              </form>         
+     <!-- final del formulario de crear cuenta-->
+  </ion-list>
+  </ion-col>
   </ion-row>
   </ion-grid>
   <ion-row>
-    <ion-col>
-      <ion-button type="submit" [disabled]="!usuario.valid" expand="block">Registrarme</ion-button>
-    </ion-col>
-</ion-row>
+  <ion-col>
+  <!-- Boton de registrase-->
+  <ion-button type="submit" [disabled]="!usuario.valid" expand="block">Registrarme</ion-button>
+  <!-- fin del boton-->
+  </ion-col>
+  </ion-row>
 
 
 </ion-content>
+
+<!-- Final del content o body de la app-->

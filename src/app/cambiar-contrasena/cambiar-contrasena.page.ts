@@ -9,6 +9,14 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class CambiarContrasenaPage implements OnInit {
 
 
+constructor(private fb: FormBuilder) { }
+
+  contrasena = this.fb.group({
+    contrasenaActual: ['', [Validators.required, Validators.minLength(6)]],
+    contrasenaNueva: ['', [Validators.required, Validators.minLength(6)]],
+    confirmarcontrasena: ['', [Validators.required, Validators.minLength(6)]],
+  });
+
 
   passwordType: string = 'password';
   passwordIcon: string = 'eye-off';
@@ -34,13 +42,6 @@ export class CambiarContrasenaPage implements OnInit {
       this.passwordIcon2 = this.passwordIcon2 === 'eye-off' ? 'eye' : 'eye-off';
   }
 
-  contrasena = this.fb.group({
-    contrasenaActual: ['', [Validators.required, Validators.minLength(6)]],
-    contrasenaNueva: ['', [Validators.required, Validators.minLength(6)]],
-    confirmarcontrasena: ['', [Validators.required, Validators.minLength(6)]],
-  });
-  
-  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }
