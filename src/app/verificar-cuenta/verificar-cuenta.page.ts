@@ -9,7 +9,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class VerificarCuentaPage implements OnInit {
 
 
-   constructor(private fb: FormBuilder) { }
+  /* validacion de formulario de verificar cuenta  */
+
+  constructor(private fb: FormBuilder) { }
 
   verificar = this.fb.group({
     nombre: ['', [Validators.required, Validators.minLength(3)]],
@@ -20,7 +22,6 @@ export class VerificarCuentaPage implements OnInit {
   
 
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

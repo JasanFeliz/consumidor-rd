@@ -9,6 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class RecuperarContrasenaPage implements OnInit {
 
 
+/* validacion de formulario de recuperar contrasena  */
+
  constructor(private fb: FormBuilder) { }
 
   recuperarC = this.fb.group({
@@ -16,7 +18,6 @@ export class RecuperarContrasenaPage implements OnInit {
   });
 
   
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

@@ -12,7 +12,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginPage implements OnInit {
 
-    
+    /* validacion de formulario de inicio de sesion  */
     
     constructor(private fb: FormBuilder) { }
     
@@ -22,6 +22,8 @@ export class LoginPage implements OnInit {
   });
   
 
+     /* Para mostar y ocultar contrasena */
+
   passwordType: string = 'password';
   passwordIcon: string = 'eye-off';
  
@@ -30,7 +32,8 @@ export class LoginPage implements OnInit {
       this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
   }
 
-  ngOnInit() {
-  }
+
+  
+  ngOnInit() {}
 
 }

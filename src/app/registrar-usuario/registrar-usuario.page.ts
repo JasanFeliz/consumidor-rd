@@ -10,6 +10,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class RegistrarUsuarioPage implements OnInit {
 
 
+/* validacion de formulario de inicio de sesion  */
+
 constructor(private fb: FormBuilder) { }
 
   usuario = this.fb.group({
@@ -20,6 +22,7 @@ constructor(private fb: FormBuilder) { }
     confirmarcontrasena: ['', [Validators.required, Validators.minLength(8)]],
   });
 
+/* Para mostar y ocultar contrasena */
 
   passwordType: string = 'password';
   passwordIcon: string = 'eye-off';
@@ -37,9 +40,10 @@ constructor(private fb: FormBuilder) { }
       this.passwordIcon1 = this.passwordIcon1 === 'eye-off' ? 'eye' : 'eye-off';
   }
 
-ngOnInit() 
-    
-{}
+
+
+
+ngOnInit() {}
 
 
 }

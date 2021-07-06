@@ -16,7 +16,7 @@
 <ion-row>
 <ion-col>
 <ion-list>
-<!-- inicio del formulario de la app-->
+<!-- inicio del formulario de recuperar contrasena-->
 <form [formGroup]="recuperarC" >
 <ion-item>
 <ion-icon name="mail-outline" slot="start"></ion-icon>
@@ -24,7 +24,7 @@
 </ion-item>
 <ion-label color="primary" *ngIf="recuperarC.controls.email.errors?.required && (recuperarC.touched || recuperarC.dirty)">*Ingrese su email</ion-label> 
 </form>
- <!-- final del formulario de la app-->
+ <!-- final del formulario de recuperar contrasena-->
 <br>
 <ion-label>Le enviaremos su contraseña a su dirección de correo electrónico dada</ion-label>
 </ion-list>
@@ -32,8 +32,9 @@
 </ion-row>
 <ion-row>
 <ion-col>
-<!-- Boton de la app-->
+<!-- Boton de recuperar contrasena-->
 <ion-button type="submit" [disabled]="!recuperarC.valid" expand="block">Recuperar</ion-button>
+<!--Fin del boton-->
 </ion-col>
 </ion-row>
 </ion-grid>

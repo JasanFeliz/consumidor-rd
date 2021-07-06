@@ -9,6 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class CambiarContrasenaPage implements OnInit {
 
 
+/* validacion de formulario de cambiar contrasena  */
+
 constructor(private fb: FormBuilder) { }
 
   contrasena = this.fb.group({
@@ -17,6 +19,7 @@ constructor(private fb: FormBuilder) { }
     confirmarcontrasena: ['', [Validators.required, Validators.minLength(6)]],
   });
 
+/* Para mostar y ocultar contrasena */
 
   passwordType: string = 'password';
   passwordIcon: string = 'eye-off';
@@ -43,7 +46,6 @@ constructor(private fb: FormBuilder) { }
   }
 
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
