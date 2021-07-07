@@ -9,12 +9,15 @@ export class AjustePage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+
+ public isOnline: boolean = false;
+
+
+  ngOnInit() {}
 
   toggleTheme(event){
   if(event.detail.checked){
-  document.body.setAttribute('color-theme','dark');
+  document.body.setAttribute('color-theme','dark'); 
   }
   else{
   document.body.setAttribute('color-theme','light');
