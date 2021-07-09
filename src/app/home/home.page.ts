@@ -11,9 +11,12 @@ import { map } from 'rxjs/operators';
 export class HomePage implements OnInit {
 
   categorias: any = [];
-
+  
+  
   constructor(
     private http: HttpClient) { }
+
+   
 
     ngOnInit() {
       this.getCategorias().subscribe(res=>{
@@ -28,4 +31,5 @@ export class HomePage implements OnInit {
       );
   }
 
+  
 }
