@@ -13,14 +13,14 @@
 
 
 <ion-content [fullscreen]="true">
-  
- <ion-list>
+
+ <ion-list *ngFor= "let categoria of categorias">
 
   <ion-item>
   <ion-card routerLink="/valoraciones-opiniones">
-  <img src="https://static-resources.mirai.com/wp-content/uploads/sites/1738/20210220182828/best-beaches-dominican-republic-portada-1.jpg">
+  <img src="../../assets/images/categorias/{{categoria.category_photo}}">
   <ion-card-header>
-  <ion-card-title>Hoteles & Resorts</ion-card-title>
+  <ion-card-title>{{categoria.category_title}}</ion-card-title>
   </ion-card-header>
   <ion-card-content>
 
@@ -28,8 +28,8 @@
   </ion-card>
   </ion-item>
 
- 
 
-  </ion-list>   
-    
+
+  </ion-list>
+
   </ion-content>

@@ -1,0 +1,139 @@
+{
+	"categorias": [{
+			"category_id": "1",
+			"category_title": "Hoteles y Resorts",
+			"category_date": "19\/02\/2020",
+			"category_photo": "hotels.jpg",
+			"category_status": "1",
+			"category_top": "0"
+		},
+		{
+			"category_id": "2",
+			"category_title": "Bancos",
+			"category_date": "29\/11\/2019",
+			"category_photo": "banco_opt.jpg",
+			"category_status": "1",
+			"category_top": "1"
+		},
+		{
+			"category_id": "3",
+			"category_title": "Taxis Servicios",
+			"category_date": "29\/11\/2019",
+			"category_photo": "Taxis_empresas.jpg",
+			"category_status": "1",
+			"category_top": "0"
+		},
+		{
+			"category_id": "4",
+			"category_title": "Tiendas",
+			"category_date": "10\/09\/2019",
+			"category_photo": "Tiendas.jpg",
+			"category_status": "1",
+			"category_top": "1"
+		},
+		{
+			"category_id": "5",
+			"category_title": "Estaciones de Gasolina",
+			"category_date": "16\/02\/2020",
+			"category_photo": "estacion_gasolina_opt.jpg",
+			"category_status": "1",
+			"category_top": "1"
+		},
+		{
+			"category_id": "6",
+			"category_title": "Salones de belleza",
+			"category_date": "29\/11\/2019",
+			"category_photo": "menfoto.jpg",
+			"category_status": "1",
+			"category_top": "0"
+		},
+		{
+			"category_id": "7",
+			"category_title": "Restaurantes",
+			"category_date": "28\/11\/2019",
+			"category_photo": "restaurantes.jpg",
+			"category_status": "1",
+			"category_top": "1"
+		},
+		{
+			"category_id": "8",
+			"category_title": "Centros de belleza",
+			"category_date": "29\/11\/2019",
+			"category_photo": "salones_belleza.jpg",
+			"category_status": "1",
+			"category_top": "0"
+		},
+		{
+			"category_id": "9",
+			"category_title": "Car Dealer",
+			"category_date": "09\/01\/2020",
+			"category_photo": "auto_dealer_opt.jpg",
+			"category_status": "1",
+			"category_top": "1"
+		},
+		{
+			"category_id": "10",
+			"category_title": "Muebles",
+			"category_date": "12\/02\/2020",
+			"category_photo": "muebleria-7_opt.jpg",
+			"category_status": "1",
+			"category_top": "0"
+		},
+		{
+			"category_id": "11",
+			"category_title": "Cines",
+			"category_date": "12\/02\/2020",
+			"category_photo": "cines_opt.jpg",
+			"category_status": "1",
+			"category_top": "0"
+		},
+		{
+			"category_id": "12",
+			"category_title": "Telecomunicaciones",
+			"category_date": "12\/02\/2020",
+			"category_photo": "telefonia_opt.png",
+			"category_status": "1",
+			"category_top": "1"
+		},
+		{
+			"category_id": "13",
+			"category_title": "Farmacias",
+			"category_date": "14\/02\/2020",
+			"category_photo": "farmacia_opt.jpg",
+			"category_status": "1",
+			"category_top": "0"
+		},
+		{
+			"category_id": "14",
+			"category_title": "Asociaciones",
+			"category_date": "15\/02\/2020",
+			"category_photo": "banco_opt.jpg",
+			"category_status": "1",
+			"category_top": "1"
+		},
+		{
+			"category_id": "15",
+			"category_title": "Electricidad",
+			"category_date": "15\/02\/2020",
+			"category_photo": "Electricidad_opt.jpg",
+			"category_status": "1",
+			"category_top": "1"
+		},
+		{
+			"category_id": "16",
+			"category_title": "Laboratorios",
+			"category_date": "15\/02\/2020",
+			"category_photo": "laboratorio_opt.jpg",
+			"category_status": "1",
+			"category_top": "0"
+		},
+		{
+			"category_id": "17",
+			"category_title": "Resorts y Hoteles",
+			"category_date": "15\/02\/2020",
+			"category_photo": "resort_opt.jpg",
+			"category_status": "1",
+			"category_top": "1"
+		}
+	]
+}
