@@ -22,14 +22,14 @@
         <form [formGroup]="login">
         <ion-item>
         <ion-icon name="mail-outline" slot="start"></ion-icon>
-        <ion-input formControlName="email" placeholder="Email" type="email"></ion-input>
+        <ion-input formControlName="email" placeholder="Email" type="email" shape="round"></ion-input>
         </ion-item>
         <ion-label color="primary" *ngIf="login.controls.email.errors?.required && (login.touched || login.dirty)">*Ingrese su email</ion-label> 
         <ion-item>
         <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
         <ion-input formControlName="contrasena"  placeholder="Contraseña" [type]="passwordType" clearOnEdit="false"></ion-input>
         <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
-        </ion-item>;
+        </ion-item>
         <ion-label color="primary" *ngIf="login.controls.contrasena.errors?.required && (login.touched || login.dirty)">*Ingrese su contraseña</ion-label>
         <ion-label color="danger" *ngIf="login.controls.contrasena.errors?.minlength && (login.touched || login.dirty)">*Su contraseña es de al menos 6 caracteres.</ion-label>                      
         </form>
@@ -40,11 +40,11 @@
         <ion-row>
         <ion-col>
         <!-- Boton de entrar-->
-        <ion-button type="submit" [disabled]="!login.valid" expand="block" >Entrar</ion-button>
+        <ion-button type="submit" [disabled]="!login.valid" expand="block" shape="round"  >Entrar</ion-button>
         <!-- Boton de crear usuario-->
-        <ion-button type="submit" fill="solid" expand="block" routerLink="/registrar-usuario">Crear Cuenta</ion-button>
+        <ion-button type="submit" shape="round" expand="block" routerLink="/registrar-usuario">Crear Cuenta</ion-button>
         <!-- Boton de entrar usando google-->
-        <ion-button type="submit" fill="solid" expand="block" color="danger">Google </ion-button>
+        <ion-button type="submit" shape="round" expand="block" color="danger">Google </ion-button>
         <!-- Boton de recuperar contrasena-->
         <ion-button type="submit" fill="clear" expand="block" color="dark" routerLink="/recuperar-contrasena">Recuperar contraseña</ion-button>
         <!-- fin de los botones de la app-->

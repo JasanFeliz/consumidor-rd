@@ -34,3 +34,13 @@ ion-title{color: white;}
 
 img {width: 400px;
 height: 150px;}
+
+ion-searchbar {
+  --box-shadow: none;
+  --border-radius: 1.2rem;
+  --placeholder-font-weight: 600;
+  --placeholder-opacity: 0.5;
+  padding: 5;
+  margin-bottom: 2rem;
+  background: blue;
+}

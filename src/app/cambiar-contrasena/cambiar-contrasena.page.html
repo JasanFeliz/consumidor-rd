@@ -15,7 +15,7 @@
      <br/>
      <ion-list>
 <!-- inicio del formulario de camnbio de contrasena -->
-        <form [formGroup]="contrasena" (ngSubmit)="guardarDatos()">    
+        <form [formGroup]="contrasena">    
         <ion-item>
         <ion-icon name="lock-closed" slot="start"></ion-icon>
         <ion-input formControlName="contrasenaActual" placeholder="Actual contraseña" [type]="passwordType" clearOnEdit="false"></ion-input>
@@ -45,7 +45,7 @@
     <ion-row>
     <ion-col>
     <!-- Boton de guradar cambio de contrasena-->
-    <ion-button type="submit" [disabled]="!contrasena.valid" expand="block">Guardar</ion-button>
+    <ion-button type="submit" [disabled]="!contrasena.valid" expand="block"  shape="round" >Guardar</ion-button>
     <!-- Boton de guradar cambio de contrasena-->
     </ion-col>
     </ion-row>
