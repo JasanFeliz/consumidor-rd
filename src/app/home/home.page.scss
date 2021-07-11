@@ -26,21 +26,26 @@
   text-decoration: none;
 }
 
-ion-toolbar{--background: blue  !important   ; }
+ion-toolbar{--background: blue;} ion-title{color: white;}
 
 ion-menu-button {color: white;}
 
-ion-title{color: white;}
+
 
 img {width: 400px;
 height: 150px;}
 
 ion-searchbar {
-  --box-shadow: none;
   --border-radius: 1.2rem;
   --placeholder-font-weight: 600;
-  --placeholder-opacity: 0.7;
+  --placeholder-opacity: 10;
   padding: 5;
   margin-bottom: 2rem;
  
 }
+ 
+
+
+ion-card{ border-radius: 18px;}
+
+ion-card-title{text-align: center;}

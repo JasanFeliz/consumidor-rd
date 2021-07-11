@@ -32,8 +32,8 @@ export class LoginPage implements OnInit {
       this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
   }
 
-
   
   ngOnInit() {}
+
 
 }

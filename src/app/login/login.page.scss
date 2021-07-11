@@ -34,14 +34,12 @@ ion-toolbar {
  }
 
  ion-button {
+  margin-top: 15px;
   height: 48px;
   font-size: 18px;
   border-radius: 50px; 
   text-transform: initial;
   font-size: 17px;
-  border-radius: 50px;
-  box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
-  --box-shadow: none;
-
 }
 
+ion-item{margin-top: 10px;}

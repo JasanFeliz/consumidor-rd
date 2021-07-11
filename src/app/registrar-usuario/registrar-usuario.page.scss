@@ -5,14 +5,7 @@ h1{text-align: center;}
 ion-item{margin-top: 3px;
     margin-bottom: 10px;}
 
-    ion-toolbar {
-        --background: blue;
-      }
-
-      ion-title{color: white;}
-
-
-      ion-back-button {color: white;}
+    ion-toolbar{--background: blue;} ion-title{color: white;} ion-back-button{color: white;}
 
       .passwordIcon{
         font-size:1.7rem !important;
