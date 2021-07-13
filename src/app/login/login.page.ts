@@ -63,7 +63,7 @@ export class LoginPage implements OnInit {
       .then((response) => {
         console.log(response);
         this.errorMsg = '';
-        this.router.navigateByUrl('dashboard');
+        this.router.navigateByUrl('home');
       }, error => {
         this.errorMsg = error.message;
         this.successMsg = '';
@@ -74,5 +74,14 @@ export class LoginPage implements OnInit {
     this.router.navigateByUrl('register');
   }
 
+  passwordType: string = 'password';
+  passwordIcon: string = 'eye-off';
+ 
+  hideShowPassword() {
+      this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+      this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
+
+
 }
 
+}

@@ -1,0 +1,45 @@
+ion-title {text-align: center;
+    color: white;}
+    
+     h1{text-align: center;}
+    
+     ion-icon {
+        margin-right: 15px;
+    }
+    
+    ion-button {
+        margin-top: 3px;
+        margin-bottom: 10px;
+        --background:blue;
+    }
+    
+    img{height: 150px;
+    width: 155px;
+    display: block;
+    margin: auto;}
+    
+    ion-toolbar {
+        --background:blue;
+      }
+    
+      a{text-decoration: none; color:blue;}
+    
+      .passwordIcon{
+        font-size:1.7rem !important;
+        position: relative !important;
+        top: 3px !important;
+        margin: 0 auto !important;
+     }
+    
+     ion-button {
+      margin-top: 15px;
+      height: 48px;
+      font-size: 18px;
+      border-radius: 50px; 
+      text-transform: initial;
+      font-size: 17px;
+    }
+    
+    ion-item{margin-top: 10px;}
+    
+    

@@ -1,5 +1,8 @@
 <ion-header>
-  <ion-toolbar color="danger">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Registro de Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -28,7 +31,7 @@
         </div>
     </ng-container>
 
-    <ion-button type="submit" expand="block" [disabled]="!userForm.valid">Registrarse</ion-button>
+    <ion-button type="submit" expand="block" [disabled]="!userForm.valid" shape="round" >Registrarse</ion-button>
 
     <label class="ion-text-center" color="danger">{{errorMsg}}</label>
     <label class="ion-text-center" color="success">{{successMsg}}</label>
