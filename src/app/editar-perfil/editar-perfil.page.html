@@ -7,27 +7,38 @@
   </ion-toolbar>
   </ion-header>
 
+ <!-- Inicio del content o body del apartado-->
+
    <ion-content>
 
+     <ion-grid>
      <ion-row>
      <ion-col>
      <center> 
      <ion-avatar><img src ="assets/images/fotoperfil.png"> </ion-avatar>
-     <ion-button color="clear" slots="end">
-     <ion-icon name="camera" color="primary"></ion-icon>  
-     </ion-button>
-     <ion-button  color="clear" slots="start">
-     <ion-icon name="images-outline"color="primary"></ion-icon>
-     </ion-button>
      </center>
      </ion-col>
      </ion-row>
 
-          <ion-row>
-          <ion-col>
-           <ion-list>
-            <form [formGroup]="editarperfil">
-            <ion-item>
+    <ion-row>
+    <ion-col>
+    <center>
+    <ion-button color="clear" slots="end">
+    <ion-icon name="camera" color="dark"></ion-icon>  
+    </ion-button>
+    <ion-button  color="clear" slots="start">
+    <ion-icon name="images-outline"color="dark"></ion-icon>
+    </ion-button>
+    </center>
+    </ion-col>
+    </ion-row>
+
+              <ion-row>
+              <ion-col>
+              <ion-list>
+              <!-- inicio del formulario inicio de sesion de la app-->
+              <form [formGroup]="editarperfil">
+              <ion-item>
               <ion-icon name="person-outline" slot="start"></ion-icon>
               <ion-input formControlName="nombre" placeholder="Nombre" type="text"></ion-input>
               </ion-item>
@@ -39,16 +50,20 @@
               </ion-item>
               <ion-label color="danger" *ngIf="editarperfil.controls.apellidos.errors?.required && (editarperfil.touched || editarperfil.dirty)">*Ingrese el dato que desea cambiar</ion-label>
               <ion-label color="danger" *ngIf="editarperfil.controls.apellidos.errors?.minlength && (editarperfil.touched || editarperfil.dirty)">*El nombre tiene que tener al menos 3 caracteres.</ion-label>
-             </form>
-             </ion-list>
-          <br>
-      </ion-col>
+              </form>
+              <!-- final del formulario de inicio de sesion la app-->
+              </ion-list>
+  <br>
+  </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col>
-      <ion-button type="submit" [disabled]="!editarperfil.valid" expand="block" shape="round" >Gurdar cambios</ion-button>
-    </ion-col>
-</ion-row>
-
+  <ion-col>
+  <!-- Boton de guardar-->
+  <ion-button type="submit" [disabled]="!editarperfil.valid" expand="block" shape="round" >Gurdar cambios</ion-button>
+   <!-- fin del boton de la app-->
+  </ion-col>
+  </ion-row>
+  </ion-grid>
 
 </ion-content>
+<!--Inicio del content o body del apartado-->
