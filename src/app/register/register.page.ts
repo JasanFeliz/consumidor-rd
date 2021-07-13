@@ -2,21 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonicAuthService } from '../ionic-auth.service';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class LoginPage implements OnInit {
+
+export class RegisterPage implements OnInit {
 
   userForm: FormGroup;
   successMsg = '';
   errorMsg = '';
 
-
   // eslint-disable-next-line @typescript-eslint/naming-convention
   error_msg = {
-    email: [
+    email :[
       {
         type: 'required',
         message: 'Provide email.'
@@ -26,7 +27,7 @@ export class LoginPage implements OnInit {
         message: 'Email is not valid.'
       }
     ],
-    password: [
+    password :[
       {
         type: 'required',
         message: 'Password is required.'
@@ -36,8 +37,8 @@ export class LoginPage implements OnInit {
         message: 'Password length should be 6 characters long.'
       }
     ]
-  };
 
+  };
 
   constructor(
     private router: Router,
@@ -45,7 +46,7 @@ export class LoginPage implements OnInit {
     private fb: FormBuilder
   ) { }
 
-  ngOnInit() {
+    ngOnInit() {
     this.userForm = this.fb.group({
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -58,21 +59,21 @@ export class LoginPage implements OnInit {
     });
   }
 
-  signIn(value) {
-    this.ionicAuthService.signinUser(value)
+  signUp(value) {
+    this.ionicAuthService.createUser(value)
       .then((response) => {
-        console.log(response);
         this.errorMsg = '';
-        this.router.navigateByUrl('dashboard');
+        this.successMsg = 'New user created.';
       }, error => {
         this.errorMsg = error.message;
         this.successMsg = '';
       });
   }
 
-  goToSignup() {
-    this.router.navigateByUrl('register');
+  goToLogin() {
+    this.router.navigateByUrl('login');
   }
 
-}
 
+
+}

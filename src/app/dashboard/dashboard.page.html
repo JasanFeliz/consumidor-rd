@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        ¡Bienvenido Usuario!
+
+        <p>E-mail : <strong>{{ userDetail }}</strong></p>
+      </ion-col>
+    </ion-row>
+
+    <ion-button type="submit" color="danger" expand="block" (click)="signOut()">Cerrar sesión</ion-button>
+  </ion-grid>
+</ion-content>
