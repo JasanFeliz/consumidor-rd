@@ -10,8 +10,8 @@
 <ion-content class="ion-padding">
   <form class="form" [formGroup]="userForm" (ngSubmit)="signUp(userForm.value)">
     <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" formControlName="email"></ion-input>
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
+      <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
     </ion-item>
 
     <ng-container *ngFor="let error of error_msg.email">
@@ -21,8 +21,8 @@
     </ng-container>
 
     <ion-item>
-      <ion-label position="floating" color="primary">Contraseña</ion-label>
-      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input type="password" formControlName="password" class="form-controll" required placeholder= "Contraseña"></ion-input>
     </ion-item>
 
     <ng-container *ngFor="let error of error_msg.password">

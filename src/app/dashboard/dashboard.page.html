@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Perfil de Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -8,12 +11,12 @@
   <ion-grid>
     <ion-row>
       <ion-col text-center>
-        ¡Bienvenido Usuario!
+         <H3>¡Bienvenido Usuario!</H3>
 
         <p>E-mail : <strong>{{ userDetail }}</strong></p>
       </ion-col>
     </ion-row>
 
-    <ion-button type="submit" color="danger" expand="block" (click)="signOut()">Cerrar sesión</ion-button>
+    <ion-button type="submit" color="danger" expand="block" (click)="signOut()" shape="round"  >Cerrar sesión</ion-button>
   </ion-grid>
 </ion-content>
