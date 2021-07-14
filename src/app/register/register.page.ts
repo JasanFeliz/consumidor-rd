@@ -74,6 +74,16 @@ export class RegisterPage implements OnInit {
     this.router.navigateByUrl('login');
   }
 
+  passwordType: string = 'password';
+  passwordIcon: string = 'eye-off';
+ 
+  hideShowPassword() {
+      this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+      this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
+  }
 
 
+
+
+  
 }

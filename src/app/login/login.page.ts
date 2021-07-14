@@ -80,8 +80,6 @@ export class LoginPage implements OnInit {
   hideShowPassword() {
       this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
       this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
-
-
-}
+  }
 
 }
