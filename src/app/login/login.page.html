@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>CONSUMIDOR RD</ion-title>
-  </ion-toolbar>
+<ion-toolbar>
+<ion-title>CONSUMIDOR RD</ion-title>
+</ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
@@ -16,35 +16,36 @@
    
 
 <ion-list>
-  <form class="form" [formGroup]="userForm" (ngSubmit)="signIn(userForm.value)">
-    <ion-item>
-      <ion-icon name="mail-outline" slot="start"></ion-icon>
-      <ion-input type="text" formControlName="email" placeholder="Email"  ></ion-input>
-    </ion-item>
+<form class="form" [formGroup]="userForm" (ngSubmit)="signIn(userForm.value)">
+<ion-item>
+<ion-icon name="mail-outline" slot="start"></ion-icon>
+<ion-input type="text" formControlName="email" placeholder="Email"  ></ion-input>
+</ion-item>
 
-    <ng-container *ngFor="let error of error_msg.email">
-      <div *ngIf="userForm.get('email').hasError(error.type) && (userForm.get('email').dirty || userForm.get('email').touched)">
-        {{ error.message }}
-      </div>
-    </ng-container>
+<ng-container *ngFor="let error of error_msg.email">
+<div *ngIf="userForm.get('email').hasError(error.type) && (userForm.get('email').dirty || userForm.get('email').touched)">
+ {{ error.message }}
+</div>
+</ng-container>
 
-    <ion-item>
-      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-      <ion-input [type]="passwordType" formControlName="password" class="form-controll" placeholder="Contraseña" clearOnEdit="false"></ion-input>
-      <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>..
-    </ion-item>
+<ion-item>
+<ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+<ion-input [type]="passwordType" formControlName="password" class="form-controll" placeholder="Contraseña" clearOnEdit="false"></ion-input>
+<ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>
+</ion-item>
 
-    <ng-container *ngFor="let error of error_msg.password">
-        <div *ngIf="userForm.get('password').hasError(error.type) && (userForm.get('password').dirty || userForm.get('password').touched)">
-          {{ error.message }}
-        </div>
-    </ng-container>
+<ng-container *ngFor="let error of error_msg.password">
+<div *ngIf="userForm.get('password').hasError(error.type) && (userForm.get('password').dirty || userForm.get('password').touched)">
+ {{ error.message }}
+</div>
+</ng-container>
 
-    <ion-button type="submit" expand="block" [disabled]="!userForm.valid" shape="round" >Iniciar sesión</ion-button>
-    <ion-button type="submit" shape="round" expand="block" color="danger">Google </ion-button>
-    <label class="ion-text-center" color="danger">{{errorMsg}}</label>
-  </form>
+<ion-button type="submit" expand="block" [disabled]="!userForm.valid" shape="round" (click)="presentLoading()" >Iniciar sesión</ion-button>
+<ion-button type="submit" shape="round" expand="block" color="danger">Google </ion-button>
+<label class="ion-text-center" color="danger">{{errorMsg}}</label>
+</form>
 </ion-list>
-  <p class="ion-text-center">No estás registrado? <a (click)="goToSignup()">Registrarse</a></p>
+
+<p class="ion-text-center">No estás registrado? <a (click)="goToSignup()">Registrarse</a></p>
 </ion-content>
 

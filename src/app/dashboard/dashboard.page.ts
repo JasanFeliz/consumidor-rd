@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonicAuthService } from '../ionic-auth.service';
+import { LoadingController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +15,7 @@ export class DashboardPage implements OnInit {
 
   constructor(
     private router: Router,
-    private ionicAuthService: IonicAuthService
+    private ionicAuthService: IonicAuthService, public loadingController: LoadingController
   ) { }
 
   ngOnInit() {
@@ -37,4 +39,18 @@ export class DashboardPage implements OnInit {
         console.log(error);
       });
   }
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Cerrando sesión...',
+      duration: 1000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
+
+
 }

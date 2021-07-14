@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonicAuthService } from '../ionic-auth.service';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { LoadingController } from '@ionic/angular';
+
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -42,7 +46,7 @@ export class LoginPage implements OnInit {
   constructor(
     private router: Router,
     private ionicAuthService: IonicAuthService,
-    private fb: FormBuilder
+    private fb: FormBuilder, public loadingController: LoadingController
   ) { }
 
   ngOnInit() {
@@ -81,5 +85,18 @@ export class LoginPage implements OnInit {
       this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
       this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
   }
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Iniciando sesión...',
+      duration: 1000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
+
 
 }
