@@ -44,7 +44,7 @@ export class DashboardPage implements OnInit {
     const loading = await this.loadingController.create({
       cssClass: 'my-custom-class',
       message: 'Cerrando sesión...',
-      duration: 1000
+      duration: 1100
     });
     await loading.present();
 
