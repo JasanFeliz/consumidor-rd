@@ -1,8 +1,11 @@
 <ion-header>
-<ion-toolbar>
-<ion-title>CONSUMIDOR RD</ion-title>
-</ion-toolbar>
-</ion-header>
+  <ion-toolbar>
+  <ion-title>CONSUMIDOR RD</ion-title>
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-header>
 
 <ion-content class="ion-padding">
 
@@ -12,8 +15,8 @@
     <h1>Iniciar Sesión</h1>
     </ion-col>
     </ion-row>
-    
-   
+
+
 
 <ion-list>
 <form class="form" [formGroup]="userForm" (ngSubmit)="signIn(userForm.value)">
@@ -51,5 +54,5 @@
 </ion-content>
 
 <ion-footer class="ion-no-border">
-<h6 class="ion-text-center">¿No estás registrado? <a (click)="goToSignup()">Registrarse</a></h6>      
+<h6 class="ion-text-center">¿No estás registrado? <a (click)="goToSignup()">Registrarse</a></h6>
 </ion-footer>
