@@ -10,26 +10,26 @@ import { map } from 'rxjs/operators';
 })
 export class HomePage implements OnInit {
 
-  categorias: any = [];
-  
-  
+  empresas: any = [];
+
+
   constructor(
     private http: HttpClient) { }
 
-   
+
 
     ngOnInit() {
-      this.getCategorias().subscribe(res=>{
+      this.getEmpresas().subscribe(res=>{
         console.log('res',res);
-        this.categorias = res;
+        this.empresas = res;
       });
     }
-    getCategorias() {return this.http
-      .get('assets/data/database.json')
+    getEmpresas() {return this.http
+      .get('assets/data/empresas.json')
       .pipe(
-        map((res: any) =>res.categorias)
+        map((res: any) =>res.empresas)
       );
   }
 
-  
+
 }
