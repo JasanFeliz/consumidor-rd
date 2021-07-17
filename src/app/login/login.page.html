@@ -1,8 +1,11 @@
 <ion-header>
   <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
   <ion-title>CONSUMIDOR RD</ion-title>
   </ion-toolbar>
-  </ion-header>
+</ion-header>
 
 <ion-content class="ion-padding">
 
@@ -41,15 +44,15 @@
 </ng-container>
 
 <ion-button type="submit" expand="block" [disabled]="!userForm.valid" shape="round" (click)="presentLoading()" >Iniciar sesión</ion-button>
-<ion-button type="submit" shape="round" expand="block" color="danger">Google </ion-button>
-<label class="ion-text-center" color="danger">{{errorMsg}}</label>
+<!-- <ion-button type="submit" shape="round" expand="block" color="danger">Google </ion-button>
+<label class="ion-text-center" color="danger">{{errorMsg}}</label> -->
 </form>
 
 </ion-list>
 
-<p class="ion-text-center">¿Se te olvido la contraseña? <a [routerLink]="'/recuperar-contrasena'" >Recuperar</a></p>
+<p class="ion-text-center"> ¿Se te olvido la contraseña? <a [routerLink]="'/recuperar-contrasena'" >Recuperar</a></p>
 </ion-content>
 
-<ion-footer class="ion-no-border">
-<p class="ion-text-center">¿No estás registrado? <a (click)="goToSignup()">Registrarse</a></p>
+<ion-footer class="ion-text-center">
+<p class="ion-text-center"> ¿No estás registrado? <a (click)="goToSignup()">Registrarse</a></p>
 </ion-footer>

@@ -29,10 +29,6 @@ const routes: Routes = [
     loadChildren: () => import('./valoraciones-opiniones/valoraciones-opiniones.module').then( m => m.ValoracionesOpinionesPageModule)
   },
   {
-    path: 'historial-opiniones',
-    loadChildren: () => import('./historial-opiniones/historial-opiniones.module').then( m => m.HistorialOpinionesPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -52,7 +48,8 @@ const routes: Routes = [
   {
     path: 'recuperar-contrasena',
     loadChildren: () => import('./recuperar-contrasena/recuperar-contrasena.module').then( m => m.RecuperarContrasenaPageModule)
-  },  {
+  },
+  {
     path: 'acerca-de',
     loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
   },

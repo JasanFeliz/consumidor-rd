@@ -12,19 +12,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-   <!-- <ion-list *ngFor= "let empresa of empresas">
-     <ion-item>
-        <ion-thumbnail slot="start">
-           <ion-img src="../../assets/images/empresas/{{empresa.empresa_photo}}"></ion-img>
-        </ion-thumbnail>
-        <ion-label>
-        <h2>{{empresa.empresa_title}}</h2>
-        <h3>{{empresa.empresa_address}}</h3>
-        <p>{{empresa.empresa_telephone}}</p>
-         </ion-label>
-      </ion-item>
-    </ion-list> -->
-
 
       <ion-card *ngFor= "let empresa of empresas">
       <ion-avatar> <img src="../../assets/images/empresas/{{empresa.empresa_photo}}"></ion-avatar>
@@ -34,7 +21,6 @@
       <ion-card-subtitle>Direccion: {{empresa.empresa_address}}</ion-card-subtitle>
       <ion-card-subtitle>Tel: {{empresa.empresa_telephone}}</ion-card-subtitle>
       </ion-card-header>
-<<<<<<< HEAD
       <p class="ion-text-center"><ion-button shape="round" routerLink="/valorar-opinar">Comentar / Opinar</ion-button></p>
       <p class="ion-text-center"><ion-button shape="round" routerLink="/valoraciones-opiniones">Ver comentarios / opiniones</ion-button></p>
 
@@ -43,18 +29,6 @@
       <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
       </ion-infinite-scroll-content>
     </ion-infinite-scroll> -->
-=======
-      <p class="ion-text-center"><ion-button shape="round" routerLink="" class="izquierda">Opinar/V.</ion-button></p>
-      <p class="ion-text-center"><ion-button shape="round" routerLink="" class="derecha" >Opiniones</ion-button></p>
-
-
-
-    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
-    </ion-infinite-scroll-content>
-    </ion-infinite-scroll>
-
->>>>>>> 0d1c66385f40850ae58ba87e2b9e4dec59faac93
 </ion-content>
 
 

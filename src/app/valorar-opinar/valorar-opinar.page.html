@@ -41,7 +41,7 @@
   <ion-icon name="albums-outline" slot="start"></ion-icon>
   <ion-input formControlName="titulo" placeholder="Asunto" type="text"></ion-input>
   </ion-item>
-  <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese el titulo</ion-label>
+  <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese el asunto</ion-label>
   <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.minlength && (opiniones.touched || opiniones.dirty)">*El título tiene que tener al menos 3 caracteres.</ion-label>
   <br>
   <br>
