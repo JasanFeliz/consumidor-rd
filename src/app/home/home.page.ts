@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
       });
     }
     getEmpresas() {return this.http
-      .get('https://consumidor.com.do/api/empresas.json')
+      .get('assets/data/empresas.json')
       .pipe(
         map((res: any) =>res.empresas)
       );
