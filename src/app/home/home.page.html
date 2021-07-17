@@ -25,7 +25,7 @@
       </ion-item>
     </ion-list> -->
     <ion-card *ngFor= "let empresa of empresas">
-      <img src="../../assets/images/empresas/{{empresa.empresa_photo}}">
+    <ion-avatar> <img src="../../assets/images/empresas/{{empresa.empresa_photo}}"></ion-avatar>
       <ion-card-header>
       <ion-card-title><h1>{{empresa.empresa_title}}</h1></ion-card-title>
       <ion-card-subtitle>Tipo: {{empresa.empresa_type}}</ion-card-subtitle>
