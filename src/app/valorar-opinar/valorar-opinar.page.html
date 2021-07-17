@@ -1,36 +1,45 @@
 <ion-header>
-<ion-toolbar>
-<ion-buttons slot="start">
-<ion-back-button></ion-back-button>
-</ion-buttons>
-<ion-title>Evaluar experiencia</ion-title>
-</ion-toolbar>
-</ion-header>
-<br>
-<br>
-
+  <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+  <ion-title>Valorar / Opinar</ion-title>
+  </ion-toolbar>
+  </ion-header>
  <!-- inicio del content o body de la app-->
 
 <ion-content>
-<center>
+  <ion-list-header>
+    <h4> Exprese su experencia a: </h4>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="../../assets/images/empresas/418__logo_c2gd4t.jpg">
+    </ion-avatar>
+    <ion-label>
+      <h2>3 Mariachis</h2>
+    </ion-label>
+  </ion-item>
+
 <h4>Valore su experencia con estas estrellas</h4>
 <br>
 <ion-button color="clear" *ngFor = "let item of estrellas">
 <ion-icon color="warning" name="star-outline"></ion-icon>
 </ion-button>
-</center>
- 
+
+
 <ion-grid>
 <ion-row>
 <ion-col>
 <ion-list>
-<h4> Exprese su experencia</h4>
+
 
 <!-- inicio del formulario de la app-->
   <form [formGroup]="opiniones">
   <ion-item>
-  <ion-icon name="text-outline" slot="start"></ion-icon>
-  <ion-input formControlName="titulo" placeholder="Título" type="text"></ion-input>
+  <ion-icon name="albums-outline" slot="start"></ion-icon>
+  <ion-input formControlName="titulo" placeholder="Asunto" type="text"></ion-input>
   </ion-item>
   <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese el titulo</ion-label>
   <ion-label color="danger" *ngIf="opiniones.controls.titulo.errors?.minlength && (opiniones.touched || opiniones.dirty)">*El título tiene que tener al menos 3 caracteres.</ion-label>
@@ -38,8 +47,8 @@
   <br>
   <br>
   <br>
-  <ion-item>    
-  <ion-icon name="clipboard-outline" slot="start"></ion-icon>
+  <ion-item>
+  <ion-icon name="chatbubble-ellipses-outline" slot="start"></ion-icon>
   <ion-textarea formControlName="opinion" placeholder="Escriba su opinión"></ion-textarea>
   </ion-item>
   <ion-label color="danger" *ngIf="opiniones.controls.opinion.errors?.required && (opiniones.touched || opiniones.dirty)">*Por favor ingrese la opinión</ion-label>

@@ -1,20 +1,20 @@
 <ion-header>
-<ion-toolbar color="primary">
-<ion-buttons slot="start">
-<ion-back-button></ion-back-button>
-</ion-buttons>
-<ion-title>Ver valoraciones</ion-title>
-</ion-toolbar>
-</ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+  <ion-title>Opiniones recientes</ion-title>
+  </ion-toolbar>
+  </ion-header>
 
 <!-- inicio del content o body de la app-->
 
 <ion-content>
 <ion-card>
-            <img src="https://static-resources.mirai.com/wp-content/uploads/sites/1738/20210220182828/best-beaches-dominican-republic-portada-1.jpg">
+            <img src="../../assets/images/categorias/restaurantes.jpg">
             <ion-card-header>
-            <ion-card-subtitle>Hoteles y resorts</ion-card-subtitle>
-            <ion-card-title>Nombre de empresa </ion-card-title>
+            <ion-card-subtitle>Empresa</ion-card-subtitle>
+            <ion-card-title>3 Mariachis </ion-card-title>
             <center>
             <span><ion-icon name="star"color="warning" size="large"></ion-icon></span>
             <span><ion-icon name="star"color="warning" size="large"></ion-icon></span>
@@ -22,31 +22,28 @@
             <span><ion-icon name="star"color="warning" size="large"></ion-icon></span>
             <span><ion-icon name="star-half-outline" color="warning" size="large"></ion-icon></span>
             </center>
-            
+
             <h6>
-            5 estrellas            
+            5 estrellas
             <ion-progress-bar color="success" value="0.75"></ion-progress-bar>
-            </h6>        
+            </h6>
             <h6>
             4 estrellas
             <ion-progress-bar color="success" value="0.16"></ion-progress-bar>
-            </h6>        
+            </h6>
             <h6>
             3 estrellas
             <ion-progress-bar color="success" value="0.083"></ion-progress-bar>
-            </h6>        
+            </h6>
             <h6>
             2 estrellas
             <ion-progress-bar color="success" value="0"></ion-progress-bar>
-            </h6>        
+            </h6>
             <h6>
             1 estrellas
             <ion-progress-bar color="success" value="0"></ion-progress-bar>
-            </h6>        
+            </h6>
             </ion-card-header>
-            <ion-button type="submit" fill="solid" expand="block" routerLink="/valorar-opinar">
-            Agregar nueva reseña
-            </ion-button>
             </ion-card>
 
 <h4><b>Ultimas valoraciones</b></h4>
@@ -91,7 +88,11 @@
 </ion-item>
 </ion-list>
 </ion-card>
-
+<br>
+<ion-button type="submit" fill="solid" expand="block" routerLink="/valorar-opinar">
+  Agregar nueva opinion
+  </ion-button>
+  <br>
 </ion-content>
 
  <!-- Final del content o body de la app-->

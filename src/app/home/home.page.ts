@@ -13,8 +13,9 @@ export class HomePage implements OnInit {
   empresas: any = [];
 
 
+
   constructor(
-    private http: HttpClient) { }
+    private http: HttpClient)  { }
 
 
 
@@ -28,8 +29,8 @@ export class HomePage implements OnInit {
       .get('assets/data/empresas.json')
       .pipe(
         map((res: any) =>res.empresas)
+
       );
   }
-
 
 }

@@ -8,7 +8,7 @@
 </ion-buttons>
 </ion-toolbar>
 <!-- buscador-->
-<ion-searchbar placeholder="Buscar Empresa, Produto o Servicio" animated="true"></ion-searchbar>
+<ion-searchbar placeholder="Buscar Empresa" animated="true"></ion-searchbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
@@ -32,11 +32,15 @@
       <ion-card-subtitle>Direccion: {{empresa.empresa_address}}</ion-card-subtitle>
       <ion-card-subtitle>Tel: {{empresa.empresa_telephone}}</ion-card-subtitle>
       </ion-card-header>
-      <p class="ion-text-center"><ion-button shape="round" routerLink="">Comentar / Opinar</ion-button></p>
+      <p class="ion-text-center"><ion-button shape="round" routerLink="/valorar-opinar">Comentar / Opinar</ion-button></p>
+      <p class="ion-text-center"><ion-button shape="round" routerLink="/valoraciones-opiniones">Ver comentarios / opiniones</ion-button></p>
+
       </ion-card>
-    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
       <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
       </ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+    </ion-infinite-scroll> -->
 </ion-content>
+
+
 
