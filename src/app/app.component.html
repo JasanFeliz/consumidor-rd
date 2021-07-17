@@ -6,7 +6,7 @@
 <ion-content>
 
 <div class="menu-header-bg"></div>
-<div class="header-content"> 
+<div class="header-content">
 <img src="assets/images/consumidor-rd4.png">
 <h1> Consumidor RD </h1>
 </div>
@@ -17,6 +17,10 @@
 
 <ion-list>
               <ion-menu-toggle auto-hide="false">
+              <ion-item [routerDirection]="'root'" [routerLink]="'/login'">
+              <ion-icon name="person-outline" slot="start"></ion-icon>
+              <ion-label>Iniciar sesion</ion-label>
+              </ion-item>
               <ion-item [routerDirection]="'root'" [routerLink]="'/dashboard'">
               <ion-icon name="person-outline" slot="start"></ion-icon>
               <ion-label>Perfil</ion-label>
@@ -27,7 +31,7 @@
               </ion-item>
               <ion-item [routerDirection]="'root'" [routerLink]="'/acerca-de'">
               <ion-icon name="information-circle-outline" slot="start"></ion-icon>
-              <ion-label>Acerca de CONSUMIDOR RD</ion-label>
+              <ion-label>Nosotros</ion-label>
               </ion-item>
               <ion-item [routerDirection]="'root'" [routerLink]="'/ayuda'">
               <ion-icon name="help-circle-outline" slot="start"></ion-icon>
@@ -38,7 +42,7 @@
   </ion-col>
   </ion-row>
   </ion-grid>
-      
+
   </ion-content>
 
   </ion-menu>
