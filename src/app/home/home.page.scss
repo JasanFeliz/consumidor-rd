@@ -31,14 +31,19 @@ ion-toolbar{--background: blue;} ion-title{color: white;}
 ion-menu-button {color: white;}
 
 
+ion-avatar{
+  
+  height: 130px;
+  width: 130px;
+  display: block;
+  margin: auto;
+margin-top: 9px;}
 
-img {width: 400px;
-height: 150px;}
 
 ion-searchbar {
   --border-radius: 1.2rem;
   --placeholder-font-weight: 600;
-  --placeholder-opacity: 10;
+  --placeholder-opacity: 0.8;
   padding: 5;
   margin-bottom: 2rem;
  
@@ -46,6 +51,10 @@ ion-searchbar {
  
 
 
-ion-card{ border-radius: 18px;}
+ion-card{ border-radius: 11px; }
 
 ion-card-title{text-align: center;}
+
+.derecha   { float: right;  margin-right: 30px;  margin-bottom: 25px;}
+
+.izquierda { float: left; margin-left: 30px;margin-bottom: 25px;}
