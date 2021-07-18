@@ -33,7 +33,7 @@
 <ion-input [type]="passwordType" formControlName="password" class="form-controll" placeholder="Contraseña" clearOnEdit="false"></ion-input>
 <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>
 </ion-item>
-
+<p class="texto" routerLink="/recuperar-contrasena">¿Se te olvido la contraseña?</p>
 <ng-container *ngFor="let error of error_msg.password">
 <div *ngIf="userForm.get('password').hasError(error.type) && (userForm.get('password').dirty || userForm.get('password').touched)">
  {{ error.message }}
@@ -47,9 +47,6 @@
 
 </ion-list>
 
-<p class="ion-text-center"> ¿Se te olvido la contraseña? <a [routerLink]="'/recuperar-contrasena'" >Recuperar</a></p>
+<p class="ion-text-center"> ¿No estás registrado? <a (click)="goToSignup()">Registrarse</a></p>
 </ion-content>
 
-<ion-footer class="ion-no-border">
-<p class="ion-text-center"> ¿No estás registrado? <a (click)="goToSignup()">Registrarse</a></p>
-</ion-footer>
