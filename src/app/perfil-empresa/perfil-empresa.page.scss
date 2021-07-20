@@ -1,0 +1,32 @@
+ion-toolbar{--background: blue;} ion-title{color: white;} ion-back-button{color: white;}
+
+
+
+
+ion-avatar{
+  
+  height: 130px;
+  width: 130px;
+  display: block;
+  margin: auto;
+margin-top: 9px;}
+
+
+ion-searchbar {
+  --border-radius: 1.2rem;
+  --placeholder-font-weight: 600;
+  --placeholder-opacity: 0.8;
+  padding: 5;
+  margin-bottom: 2rem;
+ 
+}
+ 
+
+
+ion-card{ border-radius: 11px;  }
+
+ion-card-title{text-align: center;}
+
+
+
+a{font-weight: bold; color: black; font-size:117%;}

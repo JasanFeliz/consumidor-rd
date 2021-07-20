@@ -8,7 +8,7 @@
 </ion-buttons>
 </ion-toolbar>
 <!-- buscador-->
-<ion-searchbar placeholder="Buscar Empresa" animated="true"></ion-searchbar>
+<ion-searchbar placeholder="Buscar opinion de Empresa" animated="true"></ion-searchbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
@@ -24,8 +24,10 @@
       <ion-card-subtitle>Social: {{empresa.empresa_instagram}}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
+
+
         <ion-list>
-          <ion-list-header>
+          <!--<ion-list-header>
             Opiniones recientes
           </ion-list-header>
 
@@ -42,7 +44,9 @@
               <h5>Valoracion: {{opinion.opinion_estrellas_1}} Estrellas</h5>
             </ion-label>
           </ion-item>
-          <!-- <ion-item *ngFor= "let opinion of opiniones">
+
+
+          <ion-item *ngFor= "let opinion of opiniones">
             <ion-avatar slot="start">
               <ion-thumbnail>
                 <img src="../../assets\images\avatar\{{opinion.opinion_avatar_2}}">
