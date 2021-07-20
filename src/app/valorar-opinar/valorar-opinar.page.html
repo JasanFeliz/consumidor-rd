@@ -17,13 +17,16 @@
     <ion-avatar slot="start">
       <img src="../../assets/images/empresas/418__logo_c2gd4t.jpg">
     </ion-avatar>
-    <ion-label>
-      <h2>3 Mariachis</h2>
+    <ion-label *ngFor= "let empresa of empresas">
+      <h2>{{empresa.empresa_title}}dddd</h2>
     </ion-label>
   </ion-item>
 
 <h4>Valore su experencia con estas estrellas</h4>
 <br>
+<ion-label>
+  <h2>{{}}</h2>
+</ion-label>
 <ion-button color="clear" *ngFor = "let item of estrellas">
 <ion-icon color="warning" name="star-outline"></ion-icon>
 </ion-button>

@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
 export class HomePage implements OnInit {
 
   empresas: any = [];
+  opiniones: any = [];
 
 
 
@@ -24,13 +25,22 @@ export class HomePage implements OnInit {
         console.log('res',res);
         this.empresas = res;
       });
+      this.getOpiniones().subscribe(res=>{
+        console.log('res',res);
+        this.opiniones = res;
+      });
     }
     getEmpresas() {return this.http
       .get('assets/data/empresas.json')
       .pipe(
         map((res: any) =>res.empresas)
-
       );
-  }
+   }
+  getOpiniones() {return this.http
+    .get('assets/data/opiniones.json')
+    .pipe(
+      map((res: any) =>res.opiniones)
+    );
+}
 
 }

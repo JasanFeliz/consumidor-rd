@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-valorar-opinar',
@@ -31,9 +34,9 @@ export class ValorarOpinarPage implements OnInit {
     icon:'ion-ios-star-outline'
     }
     ];
-
-
-  constructor(private fb: FormBuilder) { }
+public respuesta: any;
+empresas: any = [];
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, private http: HttpClient) { }
 
 
    opiniones = this.fb.group({
@@ -44,7 +47,19 @@ export class ValorarOpinarPage implements OnInit {
    });
 
 
-  ngOnInit() {
+   ngOnInit() {
+    this.route.paramMap.subscribe((paramMap: any)=>{
+      const{params} = paramMap;
+      this.cargarData(params.any);
+    });
   }
+  cargarData(empresas: string) {this.http
+    .get('assets/data/empresas.json')
+    .subscribe(empresa => {
+      this.empresas = empresa;
+    }
+
+    );
+}
 
 }

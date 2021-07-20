@@ -21,8 +21,55 @@
       <ion-card-subtitle>Direccion: {{empresa.empresa_address}}</ion-card-subtitle>
       <ion-card-subtitle>Tel: {{empresa.empresa_telephone}}</ion-card-subtitle>
       </ion-card-header>
-      <p class="ion-text-center"><ion-button shape="round" routerLink="/valorar-opinar">Comentar / Opinar</ion-button></p>
-      <p class="ion-text-center"><ion-button shape="round" routerLink="/valoraciones-opiniones">Ver comentarios / opiniones</ion-button></p>
+      <ion-card-content>
+        <ion-list>
+          <ion-list-header>
+            Opiniones recientes
+          </ion-list-header>
+
+          <ion-item *ngFor= "let opinion of opiniones">
+            <ion-avatar slot="start">
+              <ion-thumbnail>
+                <img src="../../assets\images\avatar\{{opinion.opinion_avatar_1}}">
+              </ion-thumbnail>
+            </ion-avatar>
+            <ion-label>
+              <h5>Nombre: {{opinion.opinion_usuario_nombre_opina_1}}</h5>
+              <h5>Asunto: {{opinion.opinion_asunto_1}}</h5>
+              <p>Comentario: {{opinion.opinion_comentario_1}}</p>
+              <h5>Valoracion: {{opinion.opinion_estrellas_1}} Estrellas</h5>
+            </ion-label>
+          </ion-item>
+          <!-- <ion-item *ngFor= "let opinion of opiniones">
+            <ion-avatar slot="start">
+              <ion-thumbnail>
+                <img src="../../assets\images\avatar\{{opinion.opinion_avatar_2}}">
+              </ion-thumbnail>
+            </ion-avatar>
+            <ion-label *ngFor= "let opinion of opiniones">
+              <h5>Nombre: {{opinion.opinion_usuario_nombre_opina_2}}</h5>
+              <h5>Asunto: {{opinion.opinion_asunto_2}}</h5>
+              <p>Comentario: {{opinion.opinion_comentario_2}}</p>
+              <h5>Valoracion: {{opinion.opinion_estrellas_2}} Estrellas</h5>
+            </ion-label>
+          </ion-item> -->
+          <!-- <ion-item *ngFor= "let opinion of opiniones">
+            <ion-avatar slot="start">
+              <ion-thumbnail>
+                <img src="../../assets\images\avatar\{{opinion.opinion_avatar_3}}">
+              </ion-thumbnail>
+            </ion-avatar>
+            <ion-label *ngFor= "let opinion of opiniones">
+              <h5>Nombre: {{opinion.opinion_usuario_nombre_opina_3}}</h5>
+              <h5>Asunto: {{opinion.opinion_asunto_3}}</h5>
+              <p>Comentario: {{opinion.opinion_comentario_3}}</p>
+              <h5>Valoracion: {{opinion.opinion_estrellas_3}} Estrellas</h5>
+            </ion-label>
+          </ion-item> -->
+        </ion-list>
+      </ion-card-content>
+      <!-- <p class="ion-text-center"><ion-button shape="round" routerLink="/valorar-opinar/{{empresa.empresa_title}}" routerDirection="forward">Comentar / Opinar</ion-button></p>
+      <p class="ion-text-center"><ion-button shape="round" routerLink="/valoraciones-opiniones">Ver comentarios / opiniones</ion-button></p> -->
 
       </ion-card>
     <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
