@@ -21,7 +21,7 @@ const routes: Routes = [
     loadChildren: () => import('./ajuste/ajuste.module').then( m => m.AjustePageModule)
   },
   {
-    path: 'valorar-opinar/:{{empresa.empresa_title}}',
+    path: 'valorar-opinar',
     loadChildren: () => import('./valorar-opinar/valorar-opinar.module').then( m => m.ValorarOpinarPageModule)
   },
   {
