@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -52,7 +52,8 @@ const routes: Routes = [
   {
     path: 'acerca-de',
     loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
-  },  {
+  },
+  {
     path: 'perfil-empresa',
     loadChildren: () => import('./perfil-empresa/perfil-empresa.module').then( m => m.PerfilEmpresaPageModule)
   },
